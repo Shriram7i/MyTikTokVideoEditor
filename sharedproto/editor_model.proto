@@ -1,0 +1,80 @@
+syntax = "proto3";
+package whensunset.editorsdk.model;
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.whensunset.mttvideoeditorsdk.model";
+
+message TimeRange {
+    double start = 1;
+    double duration = 2;
+    uint64 id = 3;
+}
+
+// 一个多媒体文件的一个多媒体数据流的信息
+message MediaStreamHolder {
+    // 视频的长和宽
+    int32 width = 1;
+    int32 height = 2;
+    // 编解码器的名称
+    string codec_type = 3;
+    // 视频的旋转角度
+    int32 rotation = 4;
+    // 视频像素的格式
+    int32 pix_format = 5;
+    // 视频的色彩空间，rgb、yuv 等等
+    int32 color_space = 6;
+    // 视频的色彩范围
+    int32 color_range = 7;
+    // 视频的 bit 流
+    int64 bit_rate = 8;
+}
+
+// 储存一个多媒体文件的信息，减少反复解析的性能消耗
+message FileHodler {
+    string path = 1;
+    // 文件的后缀名
+    string format_name = 2;
+    int32 probe_score = 3;
+    // 文件中的多媒体数据流的数量
+    int32 num_streams = 4;
+    // 文件中的多媒体数据流的信息列表
+    repeated MediaStreamHolder streams = 5;
+    // 文件中多媒体信息流中最优的视频流
+    int32 video_strema_index = 6;
+    // 文件中多媒体信息流中最优的音频流
+    int32 audio_strema_index = 7;
+    string video_comment = 9;
+}
+
+message Color {
+    float red = 1;
+    float green = 2;
+    float blue = 3;
+    float alpha = 4;
+}
+
+// 素材的种类
+enum AssetType {
+    ASSET_TYPE_VIDEO = 0;
+    // 以后会有贴纸、滤镜等等其他素材
+    ASSET_TYPE_SUB = 1;
+    ASSET_TYPE_AUDIO = 2;
+}
+// 表示一个视频素材
+message VideoAsset {
+    // 相同表示当前素材是同样的
+    uint64 asset_id = 1;
+    string asset_path = 2;
+    FileHodler asset_video_file_hodler = 3;
+    // 当前素材被剪裁的区域
+    TimeRange clipped_time_range = 4;
+    // 视频的速度
+    double speed = 5;
+    // 视频声音大小
+    double volume = 6;
+    string asset_audio_path = 7;
+    FileHodler asset_audio_file_hodler = 8;
+    bool is_reversed = 9;
+}
+
+
+
