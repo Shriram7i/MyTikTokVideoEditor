@@ -29,7 +29,7 @@ message MediaStreamHolder {
 }
 
 // 储存一个多媒体文件的信息，减少反复解析的性能消耗
-message FileHodler {
+message FileHolder {
     string path = 1;
     // 文件的后缀名
     string format_name = 2;
@@ -64,16 +64,43 @@ message VideoAsset {
     // 相同表示当前素材是同样的
     uint64 asset_id = 1;
     string asset_path = 2;
-    FileHodler asset_video_file_hodler = 3;
-    // 当前素材被剪裁的区域
+    FileHolder asset_video_file_hodler = 3;
+    // 当前素材被剪裁的时间区域
     TimeRange clipped_time_range = 4;
     // 视频的速度
     double speed = 5;
     // 视频声音大小
     double volume = 6;
     string asset_audio_path = 7;
-    FileHodler asset_audio_file_hodler = 8;
+    FileHolder asset_audio_file_hodler = 8;
     bool is_reversed = 9;
+}
+
+// 表示一个音频的素材
+message AudioAsset {
+    uint64 asset_id = 1;
+    string asset_path = 2;
+    FileHolder asset_audio_file_holder = 3;
+    TimeRange clipped_time_range = 4;
+    double speed = 5;
+    double volume = 6;
+    bool is_repeat = 7;
+}
+
+message VideoWorkspace {
+    int64 work_space_id = 1;
+    repeated VideoAsset video_asset = 2;
+    repeated AudioAsset audio_asset = 3;
+    repeated TimeRange clipped_ranges = 4;
+    int32 workspace_output_width = 5;
+    int32 workspace_output_height = 6;
+
+}
+
+enum VideoEncoderType {
+    VIDEO_ENCODER_TYPE_DEFAULT = 0;
+    VIDEO_ENCODER_TYPE_FFMPEG_MJPEG = 3;
+    VIDEO_ENCODER_TYPE_MEDIACODEC = 5;
 }
 
 
