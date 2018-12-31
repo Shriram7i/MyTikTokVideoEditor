@@ -1,7 +1,7 @@
 syntax = "proto3";
 package whensunset.editorsdk.model;
 option optimize_for = LITE_RUNTIME;
-option java_package = "com.whensunset.mttvideoeditorsdk.model";
+option java_package = "com.whensunset.mttvideoeditorsdk.model.protobuf";
 
 message TimeRange {
     double start = 1;

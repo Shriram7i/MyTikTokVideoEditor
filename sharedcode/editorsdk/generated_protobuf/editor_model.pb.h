@@ -37,11 +37,13 @@ void protobuf_AddDesc_editor_5fmodel_2eproto();
 void protobuf_AssignDesc_editor_5fmodel_2eproto();
 void protobuf_ShutdownFile_editor_5fmodel_2eproto();
 
+class AudioAsset;
 class Color;
-class FileHodler;
+class FileHolder;
 class MediaStreamHolder;
 class TimeRange;
 class VideoAsset;
+class VideoWorkspace;
 
 enum AssetType {
   ASSET_TYPE_VIDEO = 0,
@@ -54,6 +56,18 @@ bool AssetType_IsValid(int value);
 const AssetType AssetType_MIN = ASSET_TYPE_VIDEO;
 const AssetType AssetType_MAX = ASSET_TYPE_AUDIO;
 const int AssetType_ARRAYSIZE = AssetType_MAX + 1;
+
+enum VideoEncoderType {
+  VIDEO_ENCODER_TYPE_DEFAULT = 0,
+  VIDEO_ENCODER_TYPE_FFMPEG_MJPEG = 3,
+  VIDEO_ENCODER_TYPE_MEDIACODEC = 5,
+  VideoEncoderType_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  VideoEncoderType_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+};
+bool VideoEncoderType_IsValid(int value);
+const VideoEncoderType VideoEncoderType_MIN = VIDEO_ENCODER_TYPE_DEFAULT;
+const VideoEncoderType VideoEncoderType_MAX = VIDEO_ENCODER_TYPE_MEDIACODEC;
+const int VideoEncoderType_ARRAYSIZE = VideoEncoderType_MAX + 1;
 
 // ===================================================================
 
@@ -309,40 +323,40 @@ class MediaStreamHolder : public ::google::protobuf::MessageLite /* @@protoc_ins
 };
 // -------------------------------------------------------------------
 
-class FileHodler : public ::google::protobuf::MessageLite /* @@protoc_insertion_point(class_definition:whensunset.editorsdk.model.FileHodler) */ {
+class FileHolder : public ::google::protobuf::MessageLite /* @@protoc_insertion_point(class_definition:whensunset.editorsdk.model.FileHolder) */ {
  public:
-  FileHodler();
-  virtual ~FileHodler();
+  FileHolder();
+  virtual ~FileHolder();
 
-  FileHodler(const FileHodler& from);
+  FileHolder(const FileHolder& from);
 
-  inline FileHodler& operator=(const FileHodler& from) {
+  inline FileHolder& operator=(const FileHolder& from) {
     CopyFrom(from);
     return *this;
   }
 
-  static const FileHodler& default_instance();
+  static const FileHolder& default_instance();
 
   #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   // Returns the internal default instance pointer. This function can
   // return NULL thus should not be used by the user. This is intended
   // for Protobuf internal code. Please use default_instance() declared
   // above instead.
-  static inline const FileHodler* internal_default_instance() {
+  static inline const FileHolder* internal_default_instance() {
     return default_instance_;
   }
   #endif
 
-  void Swap(FileHodler* other);
+  void Swap(FileHolder* other);
 
   // implements Message ----------------------------------------------
 
-  inline FileHodler* New() const { return New(NULL); }
+  inline FileHolder* New() const { return New(NULL); }
 
-  FileHodler* New(::google::protobuf::Arena* arena) const;
+  FileHolder* New(::google::protobuf::Arena* arena) const;
   void CheckTypeAndMergeFrom(const ::google::protobuf::MessageLite& from);
-  void CopyFrom(const FileHodler& from);
-  void MergeFrom(const FileHodler& from);
+  void CopyFrom(const FileHolder& from);
+  void MergeFrom(const FileHolder& from);
   void Clear();
   bool IsInitialized() const;
 
@@ -357,7 +371,7 @@ class FileHodler : public ::google::protobuf::MessageLite /* @@protoc_insertion_
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(FileHodler* other);
+  void InternalSwap(FileHolder* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return _arena_ptr_;
@@ -442,7 +456,7 @@ class FileHodler : public ::google::protobuf::MessageLite /* @@protoc_insertion_
   ::std::string* release_video_comment();
   void set_allocated_video_comment(::std::string* video_comment);
 
-  // @@protoc_insertion_point(class_scope:whensunset.editorsdk.model.FileHodler)
+  // @@protoc_insertion_point(class_scope:whensunset.editorsdk.model.FileHolder)
  private:
 
   ::google::protobuf::internal::ArenaStringPtr _unknown_fields_;
@@ -467,7 +481,7 @@ class FileHodler : public ::google::protobuf::MessageLite /* @@protoc_insertion_
   friend void protobuf_ShutdownFile_editor_5fmodel_2eproto();
 
   void InitAsDefaultInstance();
-  static FileHodler* default_instance_;
+  static FileHolder* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -665,14 +679,14 @@ class VideoAsset : public ::google::protobuf::MessageLite /* @@protoc_insertion_
   ::std::string* release_asset_path();
   void set_allocated_asset_path(::std::string* asset_path);
 
-  // optional .whensunset.editorsdk.model.FileHodler asset_video_file_hodler = 3;
+  // optional .whensunset.editorsdk.model.FileHolder asset_video_file_hodler = 3;
   bool has_asset_video_file_hodler() const;
   void clear_asset_video_file_hodler();
   static const int kAssetVideoFileHodlerFieldNumber = 3;
-  const ::whensunset::editorsdk::model::FileHodler& asset_video_file_hodler() const;
-  ::whensunset::editorsdk::model::FileHodler* mutable_asset_video_file_hodler();
-  ::whensunset::editorsdk::model::FileHodler* release_asset_video_file_hodler();
-  void set_allocated_asset_video_file_hodler(::whensunset::editorsdk::model::FileHodler* asset_video_file_hodler);
+  const ::whensunset::editorsdk::model::FileHolder& asset_video_file_hodler() const;
+  ::whensunset::editorsdk::model::FileHolder* mutable_asset_video_file_hodler();
+  ::whensunset::editorsdk::model::FileHolder* release_asset_video_file_hodler();
+  void set_allocated_asset_video_file_hodler(::whensunset::editorsdk::model::FileHolder* asset_video_file_hodler);
 
   // optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;
   bool has_clipped_time_range() const;
@@ -706,14 +720,14 @@ class VideoAsset : public ::google::protobuf::MessageLite /* @@protoc_insertion_
   ::std::string* release_asset_audio_path();
   void set_allocated_asset_audio_path(::std::string* asset_audio_path);
 
-  // optional .whensunset.editorsdk.model.FileHodler asset_audio_file_hodler = 8;
+  // optional .whensunset.editorsdk.model.FileHolder asset_audio_file_hodler = 8;
   bool has_asset_audio_file_hodler() const;
   void clear_asset_audio_file_hodler();
   static const int kAssetAudioFileHodlerFieldNumber = 8;
-  const ::whensunset::editorsdk::model::FileHodler& asset_audio_file_hodler() const;
-  ::whensunset::editorsdk::model::FileHodler* mutable_asset_audio_file_hodler();
-  ::whensunset::editorsdk::model::FileHodler* release_asset_audio_file_hodler();
-  void set_allocated_asset_audio_file_hodler(::whensunset::editorsdk::model::FileHodler* asset_audio_file_hodler);
+  const ::whensunset::editorsdk::model::FileHolder& asset_audio_file_hodler() const;
+  ::whensunset::editorsdk::model::FileHolder* mutable_asset_audio_file_hodler();
+  ::whensunset::editorsdk::model::FileHolder* release_asset_audio_file_hodler();
+  void set_allocated_asset_audio_file_hodler(::whensunset::editorsdk::model::FileHolder* asset_audio_file_hodler);
 
   // optional bool is_reversed = 9;
   void clear_is_reversed();
@@ -730,12 +744,12 @@ class VideoAsset : public ::google::protobuf::MessageLite /* @@protoc_insertion_
   bool _is_default_instance_;
   ::google::protobuf::uint64 asset_id_;
   ::google::protobuf::internal::ArenaStringPtr asset_path_;
-  ::whensunset::editorsdk::model::FileHodler* asset_video_file_hodler_;
+  ::whensunset::editorsdk::model::FileHolder* asset_video_file_hodler_;
   ::whensunset::editorsdk::model::TimeRange* clipped_time_range_;
   double speed_;
   double volume_;
   ::google::protobuf::internal::ArenaStringPtr asset_audio_path_;
-  ::whensunset::editorsdk::model::FileHodler* asset_audio_file_hodler_;
+  ::whensunset::editorsdk::model::FileHolder* asset_audio_file_hodler_;
   bool is_reversed_;
   mutable int _cached_size_;
   #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
@@ -748,6 +762,296 @@ class VideoAsset : public ::google::protobuf::MessageLite /* @@protoc_insertion_
 
   void InitAsDefaultInstance();
   static VideoAsset* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class AudioAsset : public ::google::protobuf::MessageLite /* @@protoc_insertion_point(class_definition:whensunset.editorsdk.model.AudioAsset) */ {
+ public:
+  AudioAsset();
+  virtual ~AudioAsset();
+
+  AudioAsset(const AudioAsset& from);
+
+  inline AudioAsset& operator=(const AudioAsset& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const AudioAsset& default_instance();
+
+  #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  // Returns the internal default instance pointer. This function can
+  // return NULL thus should not be used by the user. This is intended
+  // for Protobuf internal code. Please use default_instance() declared
+  // above instead.
+  static inline const AudioAsset* internal_default_instance() {
+    return default_instance_;
+  }
+  #endif
+
+  void Swap(AudioAsset* other);
+
+  // implements Message ----------------------------------------------
+
+  inline AudioAsset* New() const { return New(NULL); }
+
+  AudioAsset* New(::google::protobuf::Arena* arena) const;
+  void CheckTypeAndMergeFrom(const ::google::protobuf::MessageLite& from);
+  void CopyFrom(const AudioAsset& from);
+  void MergeFrom(const AudioAsset& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  void DiscardUnknownFields();
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(AudioAsset* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _arena_ptr_;
+  }
+  inline ::google::protobuf::Arena* MaybeArenaPtr() const {
+    return _arena_ptr_;
+  }
+  public:
+
+  ::std::string GetTypeName() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 asset_id = 1;
+  void clear_asset_id();
+  static const int kAssetIdFieldNumber = 1;
+  ::google::protobuf::uint64 asset_id() const;
+  void set_asset_id(::google::protobuf::uint64 value);
+
+  // optional string asset_path = 2;
+  void clear_asset_path();
+  static const int kAssetPathFieldNumber = 2;
+  const ::std::string& asset_path() const;
+  void set_asset_path(const ::std::string& value);
+  void set_asset_path(const char* value);
+  void set_asset_path(const char* value, size_t size);
+  ::std::string* mutable_asset_path();
+  ::std::string* release_asset_path();
+  void set_allocated_asset_path(::std::string* asset_path);
+
+  // optional .whensunset.editorsdk.model.FileHolder asset_audio_file_holder = 3;
+  bool has_asset_audio_file_holder() const;
+  void clear_asset_audio_file_holder();
+  static const int kAssetAudioFileHolderFieldNumber = 3;
+  const ::whensunset::editorsdk::model::FileHolder& asset_audio_file_holder() const;
+  ::whensunset::editorsdk::model::FileHolder* mutable_asset_audio_file_holder();
+  ::whensunset::editorsdk::model::FileHolder* release_asset_audio_file_holder();
+  void set_allocated_asset_audio_file_holder(::whensunset::editorsdk::model::FileHolder* asset_audio_file_holder);
+
+  // optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;
+  bool has_clipped_time_range() const;
+  void clear_clipped_time_range();
+  static const int kClippedTimeRangeFieldNumber = 4;
+  const ::whensunset::editorsdk::model::TimeRange& clipped_time_range() const;
+  ::whensunset::editorsdk::model::TimeRange* mutable_clipped_time_range();
+  ::whensunset::editorsdk::model::TimeRange* release_clipped_time_range();
+  void set_allocated_clipped_time_range(::whensunset::editorsdk::model::TimeRange* clipped_time_range);
+
+  // optional double speed = 5;
+  void clear_speed();
+  static const int kSpeedFieldNumber = 5;
+  double speed() const;
+  void set_speed(double value);
+
+  // optional double volume = 6;
+  void clear_volume();
+  static const int kVolumeFieldNumber = 6;
+  double volume() const;
+  void set_volume(double value);
+
+  // optional bool is_repeat = 7;
+  void clear_is_repeat();
+  static const int kIsRepeatFieldNumber = 7;
+  bool is_repeat() const;
+  void set_is_repeat(bool value);
+
+  // @@protoc_insertion_point(class_scope:whensunset.editorsdk.model.AudioAsset)
+ private:
+
+  ::google::protobuf::internal::ArenaStringPtr _unknown_fields_;
+  ::google::protobuf::Arena* _arena_ptr_;
+
+  bool _is_default_instance_;
+  ::google::protobuf::uint64 asset_id_;
+  ::google::protobuf::internal::ArenaStringPtr asset_path_;
+  ::whensunset::editorsdk::model::FileHolder* asset_audio_file_holder_;
+  ::whensunset::editorsdk::model::TimeRange* clipped_time_range_;
+  double speed_;
+  double volume_;
+  bool is_repeat_;
+  mutable int _cached_size_;
+  #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  friend void  protobuf_AddDesc_editor_5fmodel_2eproto_impl();
+  #else
+  friend void  protobuf_AddDesc_editor_5fmodel_2eproto();
+  #endif
+  friend void protobuf_AssignDesc_editor_5fmodel_2eproto();
+  friend void protobuf_ShutdownFile_editor_5fmodel_2eproto();
+
+  void InitAsDefaultInstance();
+  static AudioAsset* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class VideoWorkspace : public ::google::protobuf::MessageLite /* @@protoc_insertion_point(class_definition:whensunset.editorsdk.model.VideoWorkspace) */ {
+ public:
+  VideoWorkspace();
+  virtual ~VideoWorkspace();
+
+  VideoWorkspace(const VideoWorkspace& from);
+
+  inline VideoWorkspace& operator=(const VideoWorkspace& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const VideoWorkspace& default_instance();
+
+  #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  // Returns the internal default instance pointer. This function can
+  // return NULL thus should not be used by the user. This is intended
+  // for Protobuf internal code. Please use default_instance() declared
+  // above instead.
+  static inline const VideoWorkspace* internal_default_instance() {
+    return default_instance_;
+  }
+  #endif
+
+  void Swap(VideoWorkspace* other);
+
+  // implements Message ----------------------------------------------
+
+  inline VideoWorkspace* New() const { return New(NULL); }
+
+  VideoWorkspace* New(::google::protobuf::Arena* arena) const;
+  void CheckTypeAndMergeFrom(const ::google::protobuf::MessageLite& from);
+  void CopyFrom(const VideoWorkspace& from);
+  void MergeFrom(const VideoWorkspace& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  void DiscardUnknownFields();
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(VideoWorkspace* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _arena_ptr_;
+  }
+  inline ::google::protobuf::Arena* MaybeArenaPtr() const {
+    return _arena_ptr_;
+  }
+  public:
+
+  ::std::string GetTypeName() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int64 work_space_id = 1;
+  void clear_work_space_id();
+  static const int kWorkSpaceIdFieldNumber = 1;
+  ::google::protobuf::int64 work_space_id() const;
+  void set_work_space_id(::google::protobuf::int64 value);
+
+  // repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;
+  int video_asset_size() const;
+  void clear_video_asset();
+  static const int kVideoAssetFieldNumber = 2;
+  const ::whensunset::editorsdk::model::VideoAsset& video_asset(int index) const;
+  ::whensunset::editorsdk::model::VideoAsset* mutable_video_asset(int index);
+  ::whensunset::editorsdk::model::VideoAsset* add_video_asset();
+  ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::VideoAsset >*
+      mutable_video_asset();
+  const ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::VideoAsset >&
+      video_asset() const;
+
+  // repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;
+  int audio_asset_size() const;
+  void clear_audio_asset();
+  static const int kAudioAssetFieldNumber = 3;
+  const ::whensunset::editorsdk::model::AudioAsset& audio_asset(int index) const;
+  ::whensunset::editorsdk::model::AudioAsset* mutable_audio_asset(int index);
+  ::whensunset::editorsdk::model::AudioAsset* add_audio_asset();
+  ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::AudioAsset >*
+      mutable_audio_asset();
+  const ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::AudioAsset >&
+      audio_asset() const;
+
+  // repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;
+  int clipped_ranges_size() const;
+  void clear_clipped_ranges();
+  static const int kClippedRangesFieldNumber = 4;
+  const ::whensunset::editorsdk::model::TimeRange& clipped_ranges(int index) const;
+  ::whensunset::editorsdk::model::TimeRange* mutable_clipped_ranges(int index);
+  ::whensunset::editorsdk::model::TimeRange* add_clipped_ranges();
+  ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::TimeRange >*
+      mutable_clipped_ranges();
+  const ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::TimeRange >&
+      clipped_ranges() const;
+
+  // optional int32 workspace_output_width = 5;
+  void clear_workspace_output_width();
+  static const int kWorkspaceOutputWidthFieldNumber = 5;
+  ::google::protobuf::int32 workspace_output_width() const;
+  void set_workspace_output_width(::google::protobuf::int32 value);
+
+  // optional int32 workspace_output_height = 6;
+  void clear_workspace_output_height();
+  static const int kWorkspaceOutputHeightFieldNumber = 6;
+  ::google::protobuf::int32 workspace_output_height() const;
+  void set_workspace_output_height(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:whensunset.editorsdk.model.VideoWorkspace)
+ private:
+
+  ::google::protobuf::internal::ArenaStringPtr _unknown_fields_;
+  ::google::protobuf::Arena* _arena_ptr_;
+
+  bool _is_default_instance_;
+  ::google::protobuf::int64 work_space_id_;
+  ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::VideoAsset > video_asset_;
+  ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::AudioAsset > audio_asset_;
+  ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::TimeRange > clipped_ranges_;
+  ::google::protobuf::int32 workspace_output_width_;
+  ::google::protobuf::int32 workspace_output_height_;
+  mutable int _cached_size_;
+  #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  friend void  protobuf_AddDesc_editor_5fmodel_2eproto_impl();
+  #else
+  friend void  protobuf_AddDesc_editor_5fmodel_2eproto();
+  #endif
+  friend void protobuf_AssignDesc_editor_5fmodel_2eproto();
+  friend void protobuf_ShutdownFile_editor_5fmodel_2eproto();
+
+  void InitAsDefaultInstance();
+  static VideoWorkspace* default_instance_;
 };
 // ===================================================================
 
@@ -947,224 +1251,224 @@ inline void MediaStreamHolder::set_bit_rate(::google::protobuf::int64 value) {
 
 // -------------------------------------------------------------------
 
-// FileHodler
+// FileHolder
 
 // optional string path = 1;
-inline void FileHodler::clear_path() {
+inline void FileHolder::clear_path() {
   path_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& FileHodler::path() const {
-  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.FileHodler.path)
+inline const ::std::string& FileHolder::path() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.FileHolder.path)
   return path_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void FileHodler::set_path(const ::std::string& value) {
+inline void FileHolder::set_path(const ::std::string& value) {
   
   path_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.FileHodler.path)
+  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.FileHolder.path)
 }
-inline void FileHodler::set_path(const char* value) {
+inline void FileHolder::set_path(const char* value) {
   
   path_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:whensunset.editorsdk.model.FileHodler.path)
+  // @@protoc_insertion_point(field_set_char:whensunset.editorsdk.model.FileHolder.path)
 }
-inline void FileHodler::set_path(const char* value, size_t size) {
+inline void FileHolder::set_path(const char* value, size_t size) {
   
   path_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:whensunset.editorsdk.model.FileHodler.path)
+  // @@protoc_insertion_point(field_set_pointer:whensunset.editorsdk.model.FileHolder.path)
 }
-inline ::std::string* FileHodler::mutable_path() {
+inline ::std::string* FileHolder::mutable_path() {
   
-  // @@protoc_insertion_point(field_mutable:whensunset.editorsdk.model.FileHodler.path)
+  // @@protoc_insertion_point(field_mutable:whensunset.editorsdk.model.FileHolder.path)
   return path_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* FileHodler::release_path() {
-  // @@protoc_insertion_point(field_release:whensunset.editorsdk.model.FileHodler.path)
+inline ::std::string* FileHolder::release_path() {
+  // @@protoc_insertion_point(field_release:whensunset.editorsdk.model.FileHolder.path)
   
   return path_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void FileHodler::set_allocated_path(::std::string* path) {
+inline void FileHolder::set_allocated_path(::std::string* path) {
   if (path != NULL) {
     
   } else {
     
   }
   path_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), path);
-  // @@protoc_insertion_point(field_set_allocated:whensunset.editorsdk.model.FileHodler.path)
+  // @@protoc_insertion_point(field_set_allocated:whensunset.editorsdk.model.FileHolder.path)
 }
 
 // optional string format_name = 2;
-inline void FileHodler::clear_format_name() {
+inline void FileHolder::clear_format_name() {
   format_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& FileHodler::format_name() const {
-  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.FileHodler.format_name)
+inline const ::std::string& FileHolder::format_name() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.FileHolder.format_name)
   return format_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void FileHodler::set_format_name(const ::std::string& value) {
+inline void FileHolder::set_format_name(const ::std::string& value) {
   
   format_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.FileHodler.format_name)
+  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.FileHolder.format_name)
 }
-inline void FileHodler::set_format_name(const char* value) {
+inline void FileHolder::set_format_name(const char* value) {
   
   format_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:whensunset.editorsdk.model.FileHodler.format_name)
+  // @@protoc_insertion_point(field_set_char:whensunset.editorsdk.model.FileHolder.format_name)
 }
-inline void FileHodler::set_format_name(const char* value, size_t size) {
+inline void FileHolder::set_format_name(const char* value, size_t size) {
   
   format_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:whensunset.editorsdk.model.FileHodler.format_name)
+  // @@protoc_insertion_point(field_set_pointer:whensunset.editorsdk.model.FileHolder.format_name)
 }
-inline ::std::string* FileHodler::mutable_format_name() {
+inline ::std::string* FileHolder::mutable_format_name() {
   
-  // @@protoc_insertion_point(field_mutable:whensunset.editorsdk.model.FileHodler.format_name)
+  // @@protoc_insertion_point(field_mutable:whensunset.editorsdk.model.FileHolder.format_name)
   return format_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* FileHodler::release_format_name() {
-  // @@protoc_insertion_point(field_release:whensunset.editorsdk.model.FileHodler.format_name)
+inline ::std::string* FileHolder::release_format_name() {
+  // @@protoc_insertion_point(field_release:whensunset.editorsdk.model.FileHolder.format_name)
   
   return format_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void FileHodler::set_allocated_format_name(::std::string* format_name) {
+inline void FileHolder::set_allocated_format_name(::std::string* format_name) {
   if (format_name != NULL) {
     
   } else {
     
   }
   format_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), format_name);
-  // @@protoc_insertion_point(field_set_allocated:whensunset.editorsdk.model.FileHodler.format_name)
+  // @@protoc_insertion_point(field_set_allocated:whensunset.editorsdk.model.FileHolder.format_name)
 }
 
 // optional int32 probe_score = 3;
-inline void FileHodler::clear_probe_score() {
+inline void FileHolder::clear_probe_score() {
   probe_score_ = 0;
 }
-inline ::google::protobuf::int32 FileHodler::probe_score() const {
-  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.FileHodler.probe_score)
+inline ::google::protobuf::int32 FileHolder::probe_score() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.FileHolder.probe_score)
   return probe_score_;
 }
-inline void FileHodler::set_probe_score(::google::protobuf::int32 value) {
+inline void FileHolder::set_probe_score(::google::protobuf::int32 value) {
   
   probe_score_ = value;
-  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.FileHodler.probe_score)
+  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.FileHolder.probe_score)
 }
 
 // optional int32 num_streams = 4;
-inline void FileHodler::clear_num_streams() {
+inline void FileHolder::clear_num_streams() {
   num_streams_ = 0;
 }
-inline ::google::protobuf::int32 FileHodler::num_streams() const {
-  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.FileHodler.num_streams)
+inline ::google::protobuf::int32 FileHolder::num_streams() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.FileHolder.num_streams)
   return num_streams_;
 }
-inline void FileHodler::set_num_streams(::google::protobuf::int32 value) {
+inline void FileHolder::set_num_streams(::google::protobuf::int32 value) {
   
   num_streams_ = value;
-  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.FileHodler.num_streams)
+  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.FileHolder.num_streams)
 }
 
 // repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;
-inline int FileHodler::streams_size() const {
+inline int FileHolder::streams_size() const {
   return streams_.size();
 }
-inline void FileHodler::clear_streams() {
+inline void FileHolder::clear_streams() {
   streams_.Clear();
 }
-inline const ::whensunset::editorsdk::model::MediaStreamHolder& FileHodler::streams(int index) const {
-  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.FileHodler.streams)
+inline const ::whensunset::editorsdk::model::MediaStreamHolder& FileHolder::streams(int index) const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.FileHolder.streams)
   return streams_.Get(index);
 }
-inline ::whensunset::editorsdk::model::MediaStreamHolder* FileHodler::mutable_streams(int index) {
-  // @@protoc_insertion_point(field_mutable:whensunset.editorsdk.model.FileHodler.streams)
+inline ::whensunset::editorsdk::model::MediaStreamHolder* FileHolder::mutable_streams(int index) {
+  // @@protoc_insertion_point(field_mutable:whensunset.editorsdk.model.FileHolder.streams)
   return streams_.Mutable(index);
 }
-inline ::whensunset::editorsdk::model::MediaStreamHolder* FileHodler::add_streams() {
-  // @@protoc_insertion_point(field_add:whensunset.editorsdk.model.FileHodler.streams)
+inline ::whensunset::editorsdk::model::MediaStreamHolder* FileHolder::add_streams() {
+  // @@protoc_insertion_point(field_add:whensunset.editorsdk.model.FileHolder.streams)
   return streams_.Add();
 }
 inline ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::MediaStreamHolder >*
-FileHodler::mutable_streams() {
-  // @@protoc_insertion_point(field_mutable_list:whensunset.editorsdk.model.FileHodler.streams)
+FileHolder::mutable_streams() {
+  // @@protoc_insertion_point(field_mutable_list:whensunset.editorsdk.model.FileHolder.streams)
   return &streams_;
 }
 inline const ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::MediaStreamHolder >&
-FileHodler::streams() const {
-  // @@protoc_insertion_point(field_list:whensunset.editorsdk.model.FileHodler.streams)
+FileHolder::streams() const {
+  // @@protoc_insertion_point(field_list:whensunset.editorsdk.model.FileHolder.streams)
   return streams_;
 }
 
 // optional int32 video_strema_index = 6;
-inline void FileHodler::clear_video_strema_index() {
+inline void FileHolder::clear_video_strema_index() {
   video_strema_index_ = 0;
 }
-inline ::google::protobuf::int32 FileHodler::video_strema_index() const {
-  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.FileHodler.video_strema_index)
+inline ::google::protobuf::int32 FileHolder::video_strema_index() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.FileHolder.video_strema_index)
   return video_strema_index_;
 }
-inline void FileHodler::set_video_strema_index(::google::protobuf::int32 value) {
+inline void FileHolder::set_video_strema_index(::google::protobuf::int32 value) {
   
   video_strema_index_ = value;
-  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.FileHodler.video_strema_index)
+  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.FileHolder.video_strema_index)
 }
 
 // optional int32 audio_strema_index = 7;
-inline void FileHodler::clear_audio_strema_index() {
+inline void FileHolder::clear_audio_strema_index() {
   audio_strema_index_ = 0;
 }
-inline ::google::protobuf::int32 FileHodler::audio_strema_index() const {
-  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.FileHodler.audio_strema_index)
+inline ::google::protobuf::int32 FileHolder::audio_strema_index() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.FileHolder.audio_strema_index)
   return audio_strema_index_;
 }
-inline void FileHodler::set_audio_strema_index(::google::protobuf::int32 value) {
+inline void FileHolder::set_audio_strema_index(::google::protobuf::int32 value) {
   
   audio_strema_index_ = value;
-  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.FileHodler.audio_strema_index)
+  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.FileHolder.audio_strema_index)
 }
 
 // optional string video_comment = 9;
-inline void FileHodler::clear_video_comment() {
+inline void FileHolder::clear_video_comment() {
   video_comment_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& FileHodler::video_comment() const {
-  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.FileHodler.video_comment)
+inline const ::std::string& FileHolder::video_comment() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.FileHolder.video_comment)
   return video_comment_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void FileHodler::set_video_comment(const ::std::string& value) {
+inline void FileHolder::set_video_comment(const ::std::string& value) {
   
   video_comment_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.FileHodler.video_comment)
+  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.FileHolder.video_comment)
 }
-inline void FileHodler::set_video_comment(const char* value) {
+inline void FileHolder::set_video_comment(const char* value) {
   
   video_comment_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:whensunset.editorsdk.model.FileHodler.video_comment)
+  // @@protoc_insertion_point(field_set_char:whensunset.editorsdk.model.FileHolder.video_comment)
 }
-inline void FileHodler::set_video_comment(const char* value, size_t size) {
+inline void FileHolder::set_video_comment(const char* value, size_t size) {
   
   video_comment_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:whensunset.editorsdk.model.FileHodler.video_comment)
+  // @@protoc_insertion_point(field_set_pointer:whensunset.editorsdk.model.FileHolder.video_comment)
 }
-inline ::std::string* FileHodler::mutable_video_comment() {
+inline ::std::string* FileHolder::mutable_video_comment() {
   
-  // @@protoc_insertion_point(field_mutable:whensunset.editorsdk.model.FileHodler.video_comment)
+  // @@protoc_insertion_point(field_mutable:whensunset.editorsdk.model.FileHolder.video_comment)
   return video_comment_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* FileHodler::release_video_comment() {
-  // @@protoc_insertion_point(field_release:whensunset.editorsdk.model.FileHodler.video_comment)
+inline ::std::string* FileHolder::release_video_comment() {
+  // @@protoc_insertion_point(field_release:whensunset.editorsdk.model.FileHolder.video_comment)
   
   return video_comment_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void FileHodler::set_allocated_video_comment(::std::string* video_comment) {
+inline void FileHolder::set_allocated_video_comment(::std::string* video_comment) {
   if (video_comment != NULL) {
     
   } else {
     
   }
   video_comment_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), video_comment);
-  // @@protoc_insertion_point(field_set_allocated:whensunset.editorsdk.model.FileHodler.video_comment)
+  // @@protoc_insertion_point(field_set_allocated:whensunset.editorsdk.model.FileHolder.video_comment)
 }
 
 // -------------------------------------------------------------------
@@ -1289,7 +1593,7 @@ inline void VideoAsset::set_allocated_asset_path(::std::string* asset_path) {
   // @@protoc_insertion_point(field_set_allocated:whensunset.editorsdk.model.VideoAsset.asset_path)
 }
 
-// optional .whensunset.editorsdk.model.FileHodler asset_video_file_hodler = 3;
+// optional .whensunset.editorsdk.model.FileHolder asset_video_file_hodler = 3;
 inline bool VideoAsset::has_asset_video_file_hodler() const {
   return !_is_default_instance_ && asset_video_file_hodler_ != NULL;
 }
@@ -1297,7 +1601,7 @@ inline void VideoAsset::clear_asset_video_file_hodler() {
   if (GetArenaNoVirtual() == NULL && asset_video_file_hodler_ != NULL) delete asset_video_file_hodler_;
   asset_video_file_hodler_ = NULL;
 }
-inline const ::whensunset::editorsdk::model::FileHodler& VideoAsset::asset_video_file_hodler() const {
+inline const ::whensunset::editorsdk::model::FileHolder& VideoAsset::asset_video_file_hodler() const {
   // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.VideoAsset.asset_video_file_hodler)
 #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   return asset_video_file_hodler_ != NULL ? *asset_video_file_hodler_ : *default_instance().asset_video_file_hodler_;
@@ -1305,22 +1609,22 @@ inline const ::whensunset::editorsdk::model::FileHodler& VideoAsset::asset_video
   return asset_video_file_hodler_ != NULL ? *asset_video_file_hodler_ : *default_instance_->asset_video_file_hodler_;
 #endif
 }
-inline ::whensunset::editorsdk::model::FileHodler* VideoAsset::mutable_asset_video_file_hodler() {
+inline ::whensunset::editorsdk::model::FileHolder* VideoAsset::mutable_asset_video_file_hodler() {
   
   if (asset_video_file_hodler_ == NULL) {
-    asset_video_file_hodler_ = new ::whensunset::editorsdk::model::FileHodler;
+    asset_video_file_hodler_ = new ::whensunset::editorsdk::model::FileHolder;
   }
   // @@protoc_insertion_point(field_mutable:whensunset.editorsdk.model.VideoAsset.asset_video_file_hodler)
   return asset_video_file_hodler_;
 }
-inline ::whensunset::editorsdk::model::FileHodler* VideoAsset::release_asset_video_file_hodler() {
+inline ::whensunset::editorsdk::model::FileHolder* VideoAsset::release_asset_video_file_hodler() {
   // @@protoc_insertion_point(field_release:whensunset.editorsdk.model.VideoAsset.asset_video_file_hodler)
   
-  ::whensunset::editorsdk::model::FileHodler* temp = asset_video_file_hodler_;
+  ::whensunset::editorsdk::model::FileHolder* temp = asset_video_file_hodler_;
   asset_video_file_hodler_ = NULL;
   return temp;
 }
-inline void VideoAsset::set_allocated_asset_video_file_hodler(::whensunset::editorsdk::model::FileHodler* asset_video_file_hodler) {
+inline void VideoAsset::set_allocated_asset_video_file_hodler(::whensunset::editorsdk::model::FileHolder* asset_video_file_hodler) {
   delete asset_video_file_hodler_;
   asset_video_file_hodler_ = asset_video_file_hodler;
   if (asset_video_file_hodler) {
@@ -1445,7 +1749,7 @@ inline void VideoAsset::set_allocated_asset_audio_path(::std::string* asset_audi
   // @@protoc_insertion_point(field_set_allocated:whensunset.editorsdk.model.VideoAsset.asset_audio_path)
 }
 
-// optional .whensunset.editorsdk.model.FileHodler asset_audio_file_hodler = 8;
+// optional .whensunset.editorsdk.model.FileHolder asset_audio_file_hodler = 8;
 inline bool VideoAsset::has_asset_audio_file_hodler() const {
   return !_is_default_instance_ && asset_audio_file_hodler_ != NULL;
 }
@@ -1453,7 +1757,7 @@ inline void VideoAsset::clear_asset_audio_file_hodler() {
   if (GetArenaNoVirtual() == NULL && asset_audio_file_hodler_ != NULL) delete asset_audio_file_hodler_;
   asset_audio_file_hodler_ = NULL;
 }
-inline const ::whensunset::editorsdk::model::FileHodler& VideoAsset::asset_audio_file_hodler() const {
+inline const ::whensunset::editorsdk::model::FileHolder& VideoAsset::asset_audio_file_hodler() const {
   // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.VideoAsset.asset_audio_file_hodler)
 #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   return asset_audio_file_hodler_ != NULL ? *asset_audio_file_hodler_ : *default_instance().asset_audio_file_hodler_;
@@ -1461,22 +1765,22 @@ inline const ::whensunset::editorsdk::model::FileHodler& VideoAsset::asset_audio
   return asset_audio_file_hodler_ != NULL ? *asset_audio_file_hodler_ : *default_instance_->asset_audio_file_hodler_;
 #endif
 }
-inline ::whensunset::editorsdk::model::FileHodler* VideoAsset::mutable_asset_audio_file_hodler() {
+inline ::whensunset::editorsdk::model::FileHolder* VideoAsset::mutable_asset_audio_file_hodler() {
   
   if (asset_audio_file_hodler_ == NULL) {
-    asset_audio_file_hodler_ = new ::whensunset::editorsdk::model::FileHodler;
+    asset_audio_file_hodler_ = new ::whensunset::editorsdk::model::FileHolder;
   }
   // @@protoc_insertion_point(field_mutable:whensunset.editorsdk.model.VideoAsset.asset_audio_file_hodler)
   return asset_audio_file_hodler_;
 }
-inline ::whensunset::editorsdk::model::FileHodler* VideoAsset::release_asset_audio_file_hodler() {
+inline ::whensunset::editorsdk::model::FileHolder* VideoAsset::release_asset_audio_file_hodler() {
   // @@protoc_insertion_point(field_release:whensunset.editorsdk.model.VideoAsset.asset_audio_file_hodler)
   
-  ::whensunset::editorsdk::model::FileHodler* temp = asset_audio_file_hodler_;
+  ::whensunset::editorsdk::model::FileHolder* temp = asset_audio_file_hodler_;
   asset_audio_file_hodler_ = NULL;
   return temp;
 }
-inline void VideoAsset::set_allocated_asset_audio_file_hodler(::whensunset::editorsdk::model::FileHodler* asset_audio_file_hodler) {
+inline void VideoAsset::set_allocated_asset_audio_file_hodler(::whensunset::editorsdk::model::FileHolder* asset_audio_file_hodler) {
   delete asset_audio_file_hodler_;
   asset_audio_file_hodler_ = asset_audio_file_hodler;
   if (asset_audio_file_hodler) {
@@ -1501,7 +1805,335 @@ inline void VideoAsset::set_is_reversed(bool value) {
   // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.VideoAsset.is_reversed)
 }
 
+// -------------------------------------------------------------------
+
+// AudioAsset
+
+// optional uint64 asset_id = 1;
+inline void AudioAsset::clear_asset_id() {
+  asset_id_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 AudioAsset::asset_id() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.AudioAsset.asset_id)
+  return asset_id_;
+}
+inline void AudioAsset::set_asset_id(::google::protobuf::uint64 value) {
+  
+  asset_id_ = value;
+  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.AudioAsset.asset_id)
+}
+
+// optional string asset_path = 2;
+inline void AudioAsset::clear_asset_path() {
+  asset_path_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& AudioAsset::asset_path() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.AudioAsset.asset_path)
+  return asset_path_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void AudioAsset::set_asset_path(const ::std::string& value) {
+  
+  asset_path_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.AudioAsset.asset_path)
+}
+inline void AudioAsset::set_asset_path(const char* value) {
+  
+  asset_path_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:whensunset.editorsdk.model.AudioAsset.asset_path)
+}
+inline void AudioAsset::set_asset_path(const char* value, size_t size) {
+  
+  asset_path_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:whensunset.editorsdk.model.AudioAsset.asset_path)
+}
+inline ::std::string* AudioAsset::mutable_asset_path() {
+  
+  // @@protoc_insertion_point(field_mutable:whensunset.editorsdk.model.AudioAsset.asset_path)
+  return asset_path_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* AudioAsset::release_asset_path() {
+  // @@protoc_insertion_point(field_release:whensunset.editorsdk.model.AudioAsset.asset_path)
+  
+  return asset_path_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void AudioAsset::set_allocated_asset_path(::std::string* asset_path) {
+  if (asset_path != NULL) {
+    
+  } else {
+    
+  }
+  asset_path_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), asset_path);
+  // @@protoc_insertion_point(field_set_allocated:whensunset.editorsdk.model.AudioAsset.asset_path)
+}
+
+// optional .whensunset.editorsdk.model.FileHolder asset_audio_file_holder = 3;
+inline bool AudioAsset::has_asset_audio_file_holder() const {
+  return !_is_default_instance_ && asset_audio_file_holder_ != NULL;
+}
+inline void AudioAsset::clear_asset_audio_file_holder() {
+  if (GetArenaNoVirtual() == NULL && asset_audio_file_holder_ != NULL) delete asset_audio_file_holder_;
+  asset_audio_file_holder_ = NULL;
+}
+inline const ::whensunset::editorsdk::model::FileHolder& AudioAsset::asset_audio_file_holder() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.AudioAsset.asset_audio_file_holder)
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  return asset_audio_file_holder_ != NULL ? *asset_audio_file_holder_ : *default_instance().asset_audio_file_holder_;
+#else
+  return asset_audio_file_holder_ != NULL ? *asset_audio_file_holder_ : *default_instance_->asset_audio_file_holder_;
+#endif
+}
+inline ::whensunset::editorsdk::model::FileHolder* AudioAsset::mutable_asset_audio_file_holder() {
+  
+  if (asset_audio_file_holder_ == NULL) {
+    asset_audio_file_holder_ = new ::whensunset::editorsdk::model::FileHolder;
+  }
+  // @@protoc_insertion_point(field_mutable:whensunset.editorsdk.model.AudioAsset.asset_audio_file_holder)
+  return asset_audio_file_holder_;
+}
+inline ::whensunset::editorsdk::model::FileHolder* AudioAsset::release_asset_audio_file_holder() {
+  // @@protoc_insertion_point(field_release:whensunset.editorsdk.model.AudioAsset.asset_audio_file_holder)
+  
+  ::whensunset::editorsdk::model::FileHolder* temp = asset_audio_file_holder_;
+  asset_audio_file_holder_ = NULL;
+  return temp;
+}
+inline void AudioAsset::set_allocated_asset_audio_file_holder(::whensunset::editorsdk::model::FileHolder* asset_audio_file_holder) {
+  delete asset_audio_file_holder_;
+  asset_audio_file_holder_ = asset_audio_file_holder;
+  if (asset_audio_file_holder) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:whensunset.editorsdk.model.AudioAsset.asset_audio_file_holder)
+}
+
+// optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;
+inline bool AudioAsset::has_clipped_time_range() const {
+  return !_is_default_instance_ && clipped_time_range_ != NULL;
+}
+inline void AudioAsset::clear_clipped_time_range() {
+  if (GetArenaNoVirtual() == NULL && clipped_time_range_ != NULL) delete clipped_time_range_;
+  clipped_time_range_ = NULL;
+}
+inline const ::whensunset::editorsdk::model::TimeRange& AudioAsset::clipped_time_range() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.AudioAsset.clipped_time_range)
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  return clipped_time_range_ != NULL ? *clipped_time_range_ : *default_instance().clipped_time_range_;
+#else
+  return clipped_time_range_ != NULL ? *clipped_time_range_ : *default_instance_->clipped_time_range_;
+#endif
+}
+inline ::whensunset::editorsdk::model::TimeRange* AudioAsset::mutable_clipped_time_range() {
+  
+  if (clipped_time_range_ == NULL) {
+    clipped_time_range_ = new ::whensunset::editorsdk::model::TimeRange;
+  }
+  // @@protoc_insertion_point(field_mutable:whensunset.editorsdk.model.AudioAsset.clipped_time_range)
+  return clipped_time_range_;
+}
+inline ::whensunset::editorsdk::model::TimeRange* AudioAsset::release_clipped_time_range() {
+  // @@protoc_insertion_point(field_release:whensunset.editorsdk.model.AudioAsset.clipped_time_range)
+  
+  ::whensunset::editorsdk::model::TimeRange* temp = clipped_time_range_;
+  clipped_time_range_ = NULL;
+  return temp;
+}
+inline void AudioAsset::set_allocated_clipped_time_range(::whensunset::editorsdk::model::TimeRange* clipped_time_range) {
+  delete clipped_time_range_;
+  clipped_time_range_ = clipped_time_range;
+  if (clipped_time_range) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:whensunset.editorsdk.model.AudioAsset.clipped_time_range)
+}
+
+// optional double speed = 5;
+inline void AudioAsset::clear_speed() {
+  speed_ = 0;
+}
+inline double AudioAsset::speed() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.AudioAsset.speed)
+  return speed_;
+}
+inline void AudioAsset::set_speed(double value) {
+  
+  speed_ = value;
+  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.AudioAsset.speed)
+}
+
+// optional double volume = 6;
+inline void AudioAsset::clear_volume() {
+  volume_ = 0;
+}
+inline double AudioAsset::volume() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.AudioAsset.volume)
+  return volume_;
+}
+inline void AudioAsset::set_volume(double value) {
+  
+  volume_ = value;
+  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.AudioAsset.volume)
+}
+
+// optional bool is_repeat = 7;
+inline void AudioAsset::clear_is_repeat() {
+  is_repeat_ = false;
+}
+inline bool AudioAsset::is_repeat() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.AudioAsset.is_repeat)
+  return is_repeat_;
+}
+inline void AudioAsset::set_is_repeat(bool value) {
+  
+  is_repeat_ = value;
+  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.AudioAsset.is_repeat)
+}
+
+// -------------------------------------------------------------------
+
+// VideoWorkspace
+
+// optional int64 work_space_id = 1;
+inline void VideoWorkspace::clear_work_space_id() {
+  work_space_id_ = GOOGLE_LONGLONG(0);
+}
+inline ::google::protobuf::int64 VideoWorkspace::work_space_id() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.VideoWorkspace.work_space_id)
+  return work_space_id_;
+}
+inline void VideoWorkspace::set_work_space_id(::google::protobuf::int64 value) {
+  
+  work_space_id_ = value;
+  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.VideoWorkspace.work_space_id)
+}
+
+// repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;
+inline int VideoWorkspace::video_asset_size() const {
+  return video_asset_.size();
+}
+inline void VideoWorkspace::clear_video_asset() {
+  video_asset_.Clear();
+}
+inline const ::whensunset::editorsdk::model::VideoAsset& VideoWorkspace::video_asset(int index) const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.VideoWorkspace.video_asset)
+  return video_asset_.Get(index);
+}
+inline ::whensunset::editorsdk::model::VideoAsset* VideoWorkspace::mutable_video_asset(int index) {
+  // @@protoc_insertion_point(field_mutable:whensunset.editorsdk.model.VideoWorkspace.video_asset)
+  return video_asset_.Mutable(index);
+}
+inline ::whensunset::editorsdk::model::VideoAsset* VideoWorkspace::add_video_asset() {
+  // @@protoc_insertion_point(field_add:whensunset.editorsdk.model.VideoWorkspace.video_asset)
+  return video_asset_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::VideoAsset >*
+VideoWorkspace::mutable_video_asset() {
+  // @@protoc_insertion_point(field_mutable_list:whensunset.editorsdk.model.VideoWorkspace.video_asset)
+  return &video_asset_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::VideoAsset >&
+VideoWorkspace::video_asset() const {
+  // @@protoc_insertion_point(field_list:whensunset.editorsdk.model.VideoWorkspace.video_asset)
+  return video_asset_;
+}
+
+// repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;
+inline int VideoWorkspace::audio_asset_size() const {
+  return audio_asset_.size();
+}
+inline void VideoWorkspace::clear_audio_asset() {
+  audio_asset_.Clear();
+}
+inline const ::whensunset::editorsdk::model::AudioAsset& VideoWorkspace::audio_asset(int index) const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.VideoWorkspace.audio_asset)
+  return audio_asset_.Get(index);
+}
+inline ::whensunset::editorsdk::model::AudioAsset* VideoWorkspace::mutable_audio_asset(int index) {
+  // @@protoc_insertion_point(field_mutable:whensunset.editorsdk.model.VideoWorkspace.audio_asset)
+  return audio_asset_.Mutable(index);
+}
+inline ::whensunset::editorsdk::model::AudioAsset* VideoWorkspace::add_audio_asset() {
+  // @@protoc_insertion_point(field_add:whensunset.editorsdk.model.VideoWorkspace.audio_asset)
+  return audio_asset_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::AudioAsset >*
+VideoWorkspace::mutable_audio_asset() {
+  // @@protoc_insertion_point(field_mutable_list:whensunset.editorsdk.model.VideoWorkspace.audio_asset)
+  return &audio_asset_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::AudioAsset >&
+VideoWorkspace::audio_asset() const {
+  // @@protoc_insertion_point(field_list:whensunset.editorsdk.model.VideoWorkspace.audio_asset)
+  return audio_asset_;
+}
+
+// repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;
+inline int VideoWorkspace::clipped_ranges_size() const {
+  return clipped_ranges_.size();
+}
+inline void VideoWorkspace::clear_clipped_ranges() {
+  clipped_ranges_.Clear();
+}
+inline const ::whensunset::editorsdk::model::TimeRange& VideoWorkspace::clipped_ranges(int index) const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.VideoWorkspace.clipped_ranges)
+  return clipped_ranges_.Get(index);
+}
+inline ::whensunset::editorsdk::model::TimeRange* VideoWorkspace::mutable_clipped_ranges(int index) {
+  // @@protoc_insertion_point(field_mutable:whensunset.editorsdk.model.VideoWorkspace.clipped_ranges)
+  return clipped_ranges_.Mutable(index);
+}
+inline ::whensunset::editorsdk::model::TimeRange* VideoWorkspace::add_clipped_ranges() {
+  // @@protoc_insertion_point(field_add:whensunset.editorsdk.model.VideoWorkspace.clipped_ranges)
+  return clipped_ranges_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::TimeRange >*
+VideoWorkspace::mutable_clipped_ranges() {
+  // @@protoc_insertion_point(field_mutable_list:whensunset.editorsdk.model.VideoWorkspace.clipped_ranges)
+  return &clipped_ranges_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::whensunset::editorsdk::model::TimeRange >&
+VideoWorkspace::clipped_ranges() const {
+  // @@protoc_insertion_point(field_list:whensunset.editorsdk.model.VideoWorkspace.clipped_ranges)
+  return clipped_ranges_;
+}
+
+// optional int32 workspace_output_width = 5;
+inline void VideoWorkspace::clear_workspace_output_width() {
+  workspace_output_width_ = 0;
+}
+inline ::google::protobuf::int32 VideoWorkspace::workspace_output_width() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.VideoWorkspace.workspace_output_width)
+  return workspace_output_width_;
+}
+inline void VideoWorkspace::set_workspace_output_width(::google::protobuf::int32 value) {
+  
+  workspace_output_width_ = value;
+  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.VideoWorkspace.workspace_output_width)
+}
+
+// optional int32 workspace_output_height = 6;
+inline void VideoWorkspace::clear_workspace_output_height() {
+  workspace_output_height_ = 0;
+}
+inline ::google::protobuf::int32 VideoWorkspace::workspace_output_height() const {
+  // @@protoc_insertion_point(field_get:whensunset.editorsdk.model.VideoWorkspace.workspace_output_height)
+  return workspace_output_height_;
+}
+inline void VideoWorkspace::set_workspace_output_height(::google::protobuf::int32 value) {
+  
+  workspace_output_height_ = value;
+  // @@protoc_insertion_point(field_set:whensunset.editorsdk.model.VideoWorkspace.workspace_output_height)
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
@@ -1522,6 +2154,7 @@ namespace google {
 namespace protobuf {
 
 template <> struct is_proto_enum< ::whensunset::editorsdk::model::AssetType> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::whensunset::editorsdk::model::VideoEncoderType> : ::google::protobuf::internal::true_type {};
 
 }  // namespace protobuf
 }  // namespace google
