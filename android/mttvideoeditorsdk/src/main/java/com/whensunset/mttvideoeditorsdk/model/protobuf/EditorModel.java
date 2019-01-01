@@ -13,7 +13,7 @@ public final class EditorModel {
    * 素材的种类
    * </pre>
    *
-   * Protobuf enum {@code whensunset.editorsdk.model.AssetType}
+   * Protobuf enum {@code sharedcode.AssetType}
    */
   public enum AssetType
       implements com.google.protobuf.Internal.EnumLite {
@@ -93,11 +93,11 @@ public final class EditorModel {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:whensunset.editorsdk.model.AssetType)
+    // @@protoc_insertion_point(enum_scope:sharedcode.AssetType)
   }
 
   /**
-   * Protobuf enum {@code whensunset.editorsdk.model.VideoEncoderType}
+   * Protobuf enum {@code sharedcode.VideoEncoderType}
    */
   public enum VideoEncoderType
       implements com.google.protobuf.Internal.EnumLite {
@@ -169,11 +169,11 @@ public final class EditorModel {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:whensunset.editorsdk.model.VideoEncoderType)
+    // @@protoc_insertion_point(enum_scope:sharedcode.VideoEncoderType)
   }
 
   public interface TimeRangeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:whensunset.editorsdk.model.TimeRange)
+      // @@protoc_insertion_point(interface_extends:sharedcode.TimeRange)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -192,12 +192,12 @@ public final class EditorModel {
     long getId();
   }
   /**
-   * Protobuf type {@code whensunset.editorsdk.model.TimeRange}
+   * Protobuf type {@code sharedcode.TimeRange}
    */
   public  static final class TimeRange extends
       com.google.protobuf.GeneratedMessageLite<
           TimeRange, TimeRange.Builder> implements
-      // @@protoc_insertion_point(message_implements:whensunset.editorsdk.model.TimeRange)
+      // @@protoc_insertion_point(message_implements:sharedcode.TimeRange)
       TimeRangeOrBuilder {
     private TimeRange() {
     }
@@ -373,12 +373,12 @@ public final class EditorModel {
     }
 
     /**
-     * Protobuf type {@code whensunset.editorsdk.model.TimeRange}
+     * Protobuf type {@code sharedcode.TimeRange}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
           com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange, Builder> implements
-        // @@protoc_insertion_point(builder_implements:whensunset.editorsdk.model.TimeRange)
+        // @@protoc_insertion_point(builder_implements:sharedcode.TimeRange)
         com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRangeOrBuilder {
       // Construct using com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange.newBuilder()
       private Builder() {
@@ -455,7 +455,7 @@ public final class EditorModel {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:whensunset.editorsdk.model.TimeRange)
+      // @@protoc_insertion_point(builder_scope:sharedcode.TimeRange)
     }
     protected final Object dynamicMethod(
         com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
@@ -549,7 +549,7 @@ public final class EditorModel {
     }
 
 
-    // @@protoc_insertion_point(class_scope:whensunset.editorsdk.model.TimeRange)
+    // @@protoc_insertion_point(class_scope:sharedcode.TimeRange)
     private static final com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new TimeRange();
@@ -568,7 +568,7 @@ public final class EditorModel {
   }
 
   public interface MediaStreamHolderOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:whensunset.editorsdk.model.MediaStreamHolder)
+      // @@protoc_insertion_point(interface_extends:sharedcode.MediaStreamHolder)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -653,12 +653,12 @@ public final class EditorModel {
    * 一个多媒体文件的一个多媒体数据流的信息
    * </pre>
    *
-   * Protobuf type {@code whensunset.editorsdk.model.MediaStreamHolder}
+   * Protobuf type {@code sharedcode.MediaStreamHolder}
    */
   public  static final class MediaStreamHolder extends
       com.google.protobuf.GeneratedMessageLite<
           MediaStreamHolder, MediaStreamHolder.Builder> implements
-      // @@protoc_insertion_point(message_implements:whensunset.editorsdk.model.MediaStreamHolder)
+      // @@protoc_insertion_point(message_implements:sharedcode.MediaStreamHolder)
       MediaStreamHolderOrBuilder {
     private MediaStreamHolder() {
       codecType_ = "";
@@ -1104,12 +1104,12 @@ public final class EditorModel {
      * 一个多媒体文件的一个多媒体数据流的信息
      * </pre>
      *
-     * Protobuf type {@code whensunset.editorsdk.model.MediaStreamHolder}
+     * Protobuf type {@code sharedcode.MediaStreamHolder}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
           com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder, Builder> implements
-        // @@protoc_insertion_point(builder_implements:whensunset.editorsdk.model.MediaStreamHolder)
+        // @@protoc_insertion_point(builder_implements:sharedcode.MediaStreamHolder)
         com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolderOrBuilder {
       // Construct using com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder.newBuilder()
       private Builder() {
@@ -1410,7 +1410,7 @@ public final class EditorModel {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:whensunset.editorsdk.model.MediaStreamHolder)
+      // @@protoc_insertion_point(builder_scope:sharedcode.MediaStreamHolder)
     }
     protected final Object dynamicMethod(
         com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
@@ -1540,7 +1540,7 @@ public final class EditorModel {
     }
 
 
-    // @@protoc_insertion_point(class_scope:whensunset.editorsdk.model.MediaStreamHolder)
+    // @@protoc_insertion_point(class_scope:sharedcode.MediaStreamHolder)
     private static final com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new MediaStreamHolder();
@@ -1559,7 +1559,7 @@ public final class EditorModel {
   }
 
   public interface FileHolderOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:whensunset.editorsdk.model.FileHolder)
+      // @@protoc_insertion_point(interface_extends:sharedcode.FileHolder)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -1609,7 +1609,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     java.util.List<com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder> 
         getStreamsList();
@@ -1618,7 +1618,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder getStreams(int index);
     /**
@@ -1626,7 +1626,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     int getStreamsCount();
 
@@ -1663,12 +1663,12 @@ public final class EditorModel {
    * 储存一个多媒体文件的信息，减少反复解析的性能消耗
    * </pre>
    *
-   * Protobuf type {@code whensunset.editorsdk.model.FileHolder}
+   * Protobuf type {@code sharedcode.FileHolder}
    */
   public  static final class FileHolder extends
       com.google.protobuf.GeneratedMessageLite<
           FileHolder, FileHolder.Builder> implements
-      // @@protoc_insertion_point(message_implements:whensunset.editorsdk.model.FileHolder)
+      // @@protoc_insertion_point(message_implements:sharedcode.FileHolder)
       FileHolderOrBuilder {
     private FileHolder() {
       path_ = "";
@@ -1854,7 +1854,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     public java.util.List<com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder> getStreamsList() {
       return streams_;
@@ -1864,7 +1864,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     public java.util.List<? extends com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolderOrBuilder> 
         getStreamsOrBuilderList() {
@@ -1875,7 +1875,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     public int getStreamsCount() {
       return streams_.size();
@@ -1885,7 +1885,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder getStreams(int index) {
       return streams_.get(index);
@@ -1895,7 +1895,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolderOrBuilder getStreamsOrBuilder(
         int index) {
@@ -1913,7 +1913,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     private void setStreams(
         int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder value) {
@@ -1928,7 +1928,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     private void setStreams(
         int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder.Builder builderForValue) {
@@ -1940,7 +1940,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     private void addStreams(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder value) {
       if (value == null) {
@@ -1954,7 +1954,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     private void addStreams(
         int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder value) {
@@ -1969,7 +1969,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     private void addStreams(
         com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder.Builder builderForValue) {
@@ -1981,7 +1981,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     private void addStreams(
         int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder.Builder builderForValue) {
@@ -1993,7 +1993,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     private void addAllStreams(
         java.lang.Iterable<? extends com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder> values) {
@@ -2006,7 +2006,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     private void clearStreams() {
       streams_ = emptyProtobufList();
@@ -2016,7 +2016,7 @@ public final class EditorModel {
      * 文件中的多媒体数据流的信息列表
      * </pre>
      *
-     * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+     * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
      */
     private void removeStreams(int index) {
       ensureStreamsIsMutable();
@@ -2281,12 +2281,12 @@ public final class EditorModel {
      * 储存一个多媒体文件的信息，减少反复解析的性能消耗
      * </pre>
      *
-     * Protobuf type {@code whensunset.editorsdk.model.FileHolder}
+     * Protobuf type {@code sharedcode.FileHolder}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
           com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder, Builder> implements
-        // @@protoc_insertion_point(builder_implements:whensunset.editorsdk.model.FileHolder)
+        // @@protoc_insertion_point(builder_implements:sharedcode.FileHolder)
         com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolderOrBuilder {
       // Construct using com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder.newBuilder()
       private Builder() {
@@ -2457,7 +2457,7 @@ public final class EditorModel {
        * 文件中的多媒体数据流的信息列表
        * </pre>
        *
-       * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+       * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
        */
       public java.util.List<com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder> getStreamsList() {
         return java.util.Collections.unmodifiableList(
@@ -2468,7 +2468,7 @@ public final class EditorModel {
        * 文件中的多媒体数据流的信息列表
        * </pre>
        *
-       * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+       * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
        */
       public int getStreamsCount() {
         return instance.getStreamsCount();
@@ -2477,7 +2477,7 @@ public final class EditorModel {
        * 文件中的多媒体数据流的信息列表
        * </pre>
        *
-       * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+       * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
        */
       public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder getStreams(int index) {
         return instance.getStreams(index);
@@ -2487,7 +2487,7 @@ public final class EditorModel {
        * 文件中的多媒体数据流的信息列表
        * </pre>
        *
-       * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+       * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
        */
       public Builder setStreams(
           int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder value) {
@@ -2500,7 +2500,7 @@ public final class EditorModel {
        * 文件中的多媒体数据流的信息列表
        * </pre>
        *
-       * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+       * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
        */
       public Builder setStreams(
           int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder.Builder builderForValue) {
@@ -2513,7 +2513,7 @@ public final class EditorModel {
        * 文件中的多媒体数据流的信息列表
        * </pre>
        *
-       * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+       * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
        */
       public Builder addStreams(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder value) {
         copyOnWrite();
@@ -2525,7 +2525,7 @@ public final class EditorModel {
        * 文件中的多媒体数据流的信息列表
        * </pre>
        *
-       * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+       * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
        */
       public Builder addStreams(
           int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder value) {
@@ -2538,7 +2538,7 @@ public final class EditorModel {
        * 文件中的多媒体数据流的信息列表
        * </pre>
        *
-       * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+       * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
        */
       public Builder addStreams(
           com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder.Builder builderForValue) {
@@ -2551,7 +2551,7 @@ public final class EditorModel {
        * 文件中的多媒体数据流的信息列表
        * </pre>
        *
-       * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+       * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
        */
       public Builder addStreams(
           int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder.Builder builderForValue) {
@@ -2564,7 +2564,7 @@ public final class EditorModel {
        * 文件中的多媒体数据流的信息列表
        * </pre>
        *
-       * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+       * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
        */
       public Builder addAllStreams(
           java.lang.Iterable<? extends com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.MediaStreamHolder> values) {
@@ -2577,7 +2577,7 @@ public final class EditorModel {
        * 文件中的多媒体数据流的信息列表
        * </pre>
        *
-       * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+       * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
        */
       public Builder clearStreams() {
         copyOnWrite();
@@ -2589,7 +2589,7 @@ public final class EditorModel {
        * 文件中的多媒体数据流的信息列表
        * </pre>
        *
-       * <code>repeated .whensunset.editorsdk.model.MediaStreamHolder streams = 5;</code>
+       * <code>repeated .sharedcode.MediaStreamHolder streams = 5;</code>
        */
       public Builder removeStreams(int index) {
         copyOnWrite();
@@ -2707,7 +2707,7 @@ public final class EditorModel {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:whensunset.editorsdk.model.FileHolder)
+      // @@protoc_insertion_point(builder_scope:sharedcode.FileHolder)
     }
     protected final Object dynamicMethod(
         com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
@@ -2844,7 +2844,7 @@ public final class EditorModel {
     }
 
 
-    // @@protoc_insertion_point(class_scope:whensunset.editorsdk.model.FileHolder)
+    // @@protoc_insertion_point(class_scope:sharedcode.FileHolder)
     private static final com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new FileHolder();
@@ -2863,7 +2863,7 @@ public final class EditorModel {
   }
 
   public interface ColorOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:whensunset.editorsdk.model.Color)
+      // @@protoc_insertion_point(interface_extends:sharedcode.Color)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -2887,12 +2887,12 @@ public final class EditorModel {
     float getAlpha();
   }
   /**
-   * Protobuf type {@code whensunset.editorsdk.model.Color}
+   * Protobuf type {@code sharedcode.Color}
    */
   public  static final class Color extends
       com.google.protobuf.GeneratedMessageLite<
           Color, Color.Builder> implements
-      // @@protoc_insertion_point(message_implements:whensunset.editorsdk.model.Color)
+      // @@protoc_insertion_point(message_implements:sharedcode.Color)
       ColorOrBuilder {
     private Color() {
     }
@@ -3098,12 +3098,12 @@ public final class EditorModel {
     }
 
     /**
-     * Protobuf type {@code whensunset.editorsdk.model.Color}
+     * Protobuf type {@code sharedcode.Color}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
           com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.Color, Builder> implements
-        // @@protoc_insertion_point(builder_implements:whensunset.editorsdk.model.Color)
+        // @@protoc_insertion_point(builder_implements:sharedcode.Color)
         com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.ColorOrBuilder {
       // Construct using com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.Color.newBuilder()
       private Builder() {
@@ -3203,7 +3203,7 @@ public final class EditorModel {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:whensunset.editorsdk.model.Color)
+      // @@protoc_insertion_point(builder_scope:sharedcode.Color)
     }
     protected final Object dynamicMethod(
         com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
@@ -3304,7 +3304,7 @@ public final class EditorModel {
     }
 
 
-    // @@protoc_insertion_point(class_scope:whensunset.editorsdk.model.Color)
+    // @@protoc_insertion_point(class_scope:sharedcode.Color)
     private static final com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.Color DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new Color();
@@ -3323,7 +3323,7 @@ public final class EditorModel {
   }
 
   public interface VideoAssetOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:whensunset.editorsdk.model.VideoAsset)
+      // @@protoc_insertion_point(interface_extends:sharedcode.VideoAsset)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -3346,11 +3346,11 @@ public final class EditorModel {
         getAssetPathBytes();
 
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_video_file_hodler = 3;</code>
+     * <code>optional .sharedcode.FileHolder asset_video_file_hodler = 3;</code>
      */
     boolean hasAssetVideoFileHodler();
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_video_file_hodler = 3;</code>
+     * <code>optional .sharedcode.FileHolder asset_video_file_hodler = 3;</code>
      */
     com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder getAssetVideoFileHodler();
 
@@ -3359,7 +3359,7 @@ public final class EditorModel {
      * 当前素材被剪裁的时间区域
      * </pre>
      *
-     * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+     * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
      */
     boolean hasClippedTimeRange();
     /**
@@ -3367,7 +3367,7 @@ public final class EditorModel {
      * 当前素材被剪裁的时间区域
      * </pre>
      *
-     * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+     * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
      */
     com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange getClippedTimeRange();
 
@@ -3400,11 +3400,11 @@ public final class EditorModel {
         getAssetAudioPathBytes();
 
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_hodler = 8;</code>
+     * <code>optional .sharedcode.FileHolder asset_audio_file_hodler = 8;</code>
      */
     boolean hasAssetAudioFileHodler();
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_hodler = 8;</code>
+     * <code>optional .sharedcode.FileHolder asset_audio_file_hodler = 8;</code>
      */
     com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder getAssetAudioFileHodler();
 
@@ -3418,12 +3418,12 @@ public final class EditorModel {
    * 表示一个视频素材
    * </pre>
    *
-   * Protobuf type {@code whensunset.editorsdk.model.VideoAsset}
+   * Protobuf type {@code sharedcode.VideoAsset}
    */
   public  static final class VideoAsset extends
       com.google.protobuf.GeneratedMessageLite<
           VideoAsset, VideoAsset.Builder> implements
-      // @@protoc_insertion_point(message_implements:whensunset.editorsdk.model.VideoAsset)
+      // @@protoc_insertion_point(message_implements:sharedcode.VideoAsset)
       VideoAssetOrBuilder {
     private VideoAsset() {
       assetPath_ = "";
@@ -3513,19 +3513,19 @@ public final class EditorModel {
     public static final int ASSET_VIDEO_FILE_HODLER_FIELD_NUMBER = 3;
     private com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder assetVideoFileHodler_;
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_video_file_hodler = 3;</code>
+     * <code>optional .sharedcode.FileHolder asset_video_file_hodler = 3;</code>
      */
     public boolean hasAssetVideoFileHodler() {
       return assetVideoFileHodler_ != null;
     }
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_video_file_hodler = 3;</code>
+     * <code>optional .sharedcode.FileHolder asset_video_file_hodler = 3;</code>
      */
     public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder getAssetVideoFileHodler() {
       return assetVideoFileHodler_ == null ? com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder.getDefaultInstance() : assetVideoFileHodler_;
     }
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_video_file_hodler = 3;</code>
+     * <code>optional .sharedcode.FileHolder asset_video_file_hodler = 3;</code>
      */
     private void setAssetVideoFileHodler(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder value) {
       if (value == null) {
@@ -3535,7 +3535,7 @@ public final class EditorModel {
       
       }
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_video_file_hodler = 3;</code>
+     * <code>optional .sharedcode.FileHolder asset_video_file_hodler = 3;</code>
      */
     private void setAssetVideoFileHodler(
         com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder.Builder builderForValue) {
@@ -3543,7 +3543,7 @@ public final class EditorModel {
       
     }
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_video_file_hodler = 3;</code>
+     * <code>optional .sharedcode.FileHolder asset_video_file_hodler = 3;</code>
      */
     private void mergeAssetVideoFileHodler(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder value) {
       if (assetVideoFileHodler_ != null &&
@@ -3556,7 +3556,7 @@ public final class EditorModel {
       
     }
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_video_file_hodler = 3;</code>
+     * <code>optional .sharedcode.FileHolder asset_video_file_hodler = 3;</code>
      */
     private void clearAssetVideoFileHodler() {  assetVideoFileHodler_ = null;
       
@@ -3569,7 +3569,7 @@ public final class EditorModel {
      * 当前素材被剪裁的时间区域
      * </pre>
      *
-     * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+     * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
      */
     public boolean hasClippedTimeRange() {
       return clippedTimeRange_ != null;
@@ -3579,7 +3579,7 @@ public final class EditorModel {
      * 当前素材被剪裁的时间区域
      * </pre>
      *
-     * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+     * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
      */
     public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange getClippedTimeRange() {
       return clippedTimeRange_ == null ? com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange.getDefaultInstance() : clippedTimeRange_;
@@ -3589,7 +3589,7 @@ public final class EditorModel {
      * 当前素材被剪裁的时间区域
      * </pre>
      *
-     * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+     * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
      */
     private void setClippedTimeRange(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange value) {
       if (value == null) {
@@ -3603,7 +3603,7 @@ public final class EditorModel {
      * 当前素材被剪裁的时间区域
      * </pre>
      *
-     * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+     * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
      */
     private void setClippedTimeRange(
         com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange.Builder builderForValue) {
@@ -3615,7 +3615,7 @@ public final class EditorModel {
      * 当前素材被剪裁的时间区域
      * </pre>
      *
-     * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+     * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
      */
     private void mergeClippedTimeRange(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange value) {
       if (clippedTimeRange_ != null &&
@@ -3632,7 +3632,7 @@ public final class EditorModel {
      * 当前素材被剪裁的时间区域
      * </pre>
      *
-     * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+     * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
      */
     private void clearClippedTimeRange() {  clippedTimeRange_ = null;
       
@@ -3757,19 +3757,19 @@ public final class EditorModel {
     public static final int ASSET_AUDIO_FILE_HODLER_FIELD_NUMBER = 8;
     private com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder assetAudioFileHodler_;
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_hodler = 8;</code>
+     * <code>optional .sharedcode.FileHolder asset_audio_file_hodler = 8;</code>
      */
     public boolean hasAssetAudioFileHodler() {
       return assetAudioFileHodler_ != null;
     }
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_hodler = 8;</code>
+     * <code>optional .sharedcode.FileHolder asset_audio_file_hodler = 8;</code>
      */
     public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder getAssetAudioFileHodler() {
       return assetAudioFileHodler_ == null ? com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder.getDefaultInstance() : assetAudioFileHodler_;
     }
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_hodler = 8;</code>
+     * <code>optional .sharedcode.FileHolder asset_audio_file_hodler = 8;</code>
      */
     private void setAssetAudioFileHodler(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder value) {
       if (value == null) {
@@ -3779,7 +3779,7 @@ public final class EditorModel {
       
       }
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_hodler = 8;</code>
+     * <code>optional .sharedcode.FileHolder asset_audio_file_hodler = 8;</code>
      */
     private void setAssetAudioFileHodler(
         com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder.Builder builderForValue) {
@@ -3787,7 +3787,7 @@ public final class EditorModel {
       
     }
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_hodler = 8;</code>
+     * <code>optional .sharedcode.FileHolder asset_audio_file_hodler = 8;</code>
      */
     private void mergeAssetAudioFileHodler(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder value) {
       if (assetAudioFileHodler_ != null &&
@@ -3800,7 +3800,7 @@ public final class EditorModel {
       
     }
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_hodler = 8;</code>
+     * <code>optional .sharedcode.FileHolder asset_audio_file_hodler = 8;</code>
      */
     private void clearAssetAudioFileHodler() {  assetAudioFileHodler_ = null;
       
@@ -3978,12 +3978,12 @@ public final class EditorModel {
      * 表示一个视频素材
      * </pre>
      *
-     * Protobuf type {@code whensunset.editorsdk.model.VideoAsset}
+     * Protobuf type {@code sharedcode.VideoAsset}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
           com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset, Builder> implements
-        // @@protoc_insertion_point(builder_implements:whensunset.editorsdk.model.VideoAsset)
+        // @@protoc_insertion_point(builder_implements:sharedcode.VideoAsset)
         com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAssetOrBuilder {
       // Construct using com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset.newBuilder()
       private Builder() {
@@ -4067,19 +4067,19 @@ public final class EditorModel {
       }
 
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_video_file_hodler = 3;</code>
+       * <code>optional .sharedcode.FileHolder asset_video_file_hodler = 3;</code>
        */
       public boolean hasAssetVideoFileHodler() {
         return instance.hasAssetVideoFileHodler();
       }
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_video_file_hodler = 3;</code>
+       * <code>optional .sharedcode.FileHolder asset_video_file_hodler = 3;</code>
        */
       public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder getAssetVideoFileHodler() {
         return instance.getAssetVideoFileHodler();
       }
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_video_file_hodler = 3;</code>
+       * <code>optional .sharedcode.FileHolder asset_video_file_hodler = 3;</code>
        */
       public Builder setAssetVideoFileHodler(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder value) {
         copyOnWrite();
@@ -4087,7 +4087,7 @@ public final class EditorModel {
         return this;
         }
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_video_file_hodler = 3;</code>
+       * <code>optional .sharedcode.FileHolder asset_video_file_hodler = 3;</code>
        */
       public Builder setAssetVideoFileHodler(
           com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder.Builder builderForValue) {
@@ -4096,7 +4096,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_video_file_hodler = 3;</code>
+       * <code>optional .sharedcode.FileHolder asset_video_file_hodler = 3;</code>
        */
       public Builder mergeAssetVideoFileHodler(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder value) {
         copyOnWrite();
@@ -4104,7 +4104,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_video_file_hodler = 3;</code>
+       * <code>optional .sharedcode.FileHolder asset_video_file_hodler = 3;</code>
        */
       public Builder clearAssetVideoFileHodler() {  copyOnWrite();
         instance.clearAssetVideoFileHodler();
@@ -4116,7 +4116,7 @@ public final class EditorModel {
        * 当前素材被剪裁的时间区域
        * </pre>
        *
-       * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+       * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
        */
       public boolean hasClippedTimeRange() {
         return instance.hasClippedTimeRange();
@@ -4126,7 +4126,7 @@ public final class EditorModel {
        * 当前素材被剪裁的时间区域
        * </pre>
        *
-       * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+       * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
        */
       public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange getClippedTimeRange() {
         return instance.getClippedTimeRange();
@@ -4136,7 +4136,7 @@ public final class EditorModel {
        * 当前素材被剪裁的时间区域
        * </pre>
        *
-       * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+       * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
        */
       public Builder setClippedTimeRange(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange value) {
         copyOnWrite();
@@ -4148,7 +4148,7 @@ public final class EditorModel {
        * 当前素材被剪裁的时间区域
        * </pre>
        *
-       * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+       * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
        */
       public Builder setClippedTimeRange(
           com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange.Builder builderForValue) {
@@ -4161,7 +4161,7 @@ public final class EditorModel {
        * 当前素材被剪裁的时间区域
        * </pre>
        *
-       * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+       * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
        */
       public Builder mergeClippedTimeRange(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange value) {
         copyOnWrite();
@@ -4173,7 +4173,7 @@ public final class EditorModel {
        * 当前素材被剪裁的时间区域
        * </pre>
        *
-       * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+       * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
        */
       public Builder clearClippedTimeRange() {  copyOnWrite();
         instance.clearClippedTimeRange();
@@ -4291,19 +4291,19 @@ public final class EditorModel {
       }
 
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_hodler = 8;</code>
+       * <code>optional .sharedcode.FileHolder asset_audio_file_hodler = 8;</code>
        */
       public boolean hasAssetAudioFileHodler() {
         return instance.hasAssetAudioFileHodler();
       }
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_hodler = 8;</code>
+       * <code>optional .sharedcode.FileHolder asset_audio_file_hodler = 8;</code>
        */
       public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder getAssetAudioFileHodler() {
         return instance.getAssetAudioFileHodler();
       }
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_hodler = 8;</code>
+       * <code>optional .sharedcode.FileHolder asset_audio_file_hodler = 8;</code>
        */
       public Builder setAssetAudioFileHodler(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder value) {
         copyOnWrite();
@@ -4311,7 +4311,7 @@ public final class EditorModel {
         return this;
         }
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_hodler = 8;</code>
+       * <code>optional .sharedcode.FileHolder asset_audio_file_hodler = 8;</code>
        */
       public Builder setAssetAudioFileHodler(
           com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder.Builder builderForValue) {
@@ -4320,7 +4320,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_hodler = 8;</code>
+       * <code>optional .sharedcode.FileHolder asset_audio_file_hodler = 8;</code>
        */
       public Builder mergeAssetAudioFileHodler(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder value) {
         copyOnWrite();
@@ -4328,7 +4328,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_hodler = 8;</code>
+       * <code>optional .sharedcode.FileHolder asset_audio_file_hodler = 8;</code>
        */
       public Builder clearAssetAudioFileHodler() {  copyOnWrite();
         instance.clearAssetAudioFileHodler();
@@ -4358,7 +4358,7 @@ public final class EditorModel {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:whensunset.editorsdk.model.VideoAsset)
+      // @@protoc_insertion_point(builder_scope:sharedcode.VideoAsset)
     }
     protected final Object dynamicMethod(
         com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
@@ -4517,7 +4517,7 @@ public final class EditorModel {
     }
 
 
-    // @@protoc_insertion_point(class_scope:whensunset.editorsdk.model.VideoAsset)
+    // @@protoc_insertion_point(class_scope:sharedcode.VideoAsset)
     private static final com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new VideoAsset();
@@ -4536,7 +4536,7 @@ public final class EditorModel {
   }
 
   public interface AudioAssetOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:whensunset.editorsdk.model.AudioAsset)
+      // @@protoc_insertion_point(interface_extends:sharedcode.AudioAsset)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -4555,20 +4555,20 @@ public final class EditorModel {
         getAssetPathBytes();
 
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_holder = 3;</code>
+     * <code>optional .sharedcode.FileHolder asset_audio_file_holder = 3;</code>
      */
     boolean hasAssetAudioFileHolder();
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_holder = 3;</code>
+     * <code>optional .sharedcode.FileHolder asset_audio_file_holder = 3;</code>
      */
     com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder getAssetAudioFileHolder();
 
     /**
-     * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+     * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
      */
     boolean hasClippedTimeRange();
     /**
-     * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+     * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
      */
     com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange getClippedTimeRange();
 
@@ -4592,12 +4592,12 @@ public final class EditorModel {
    * 表示一个音频的素材
    * </pre>
    *
-   * Protobuf type {@code whensunset.editorsdk.model.AudioAsset}
+   * Protobuf type {@code sharedcode.AudioAsset}
    */
   public  static final class AudioAsset extends
       com.google.protobuf.GeneratedMessageLite<
           AudioAsset, AudioAsset.Builder> implements
-      // @@protoc_insertion_point(message_implements:whensunset.editorsdk.model.AudioAsset)
+      // @@protoc_insertion_point(message_implements:sharedcode.AudioAsset)
       AudioAssetOrBuilder {
     private AudioAsset() {
       assetPath_ = "";
@@ -4674,19 +4674,19 @@ public final class EditorModel {
     public static final int ASSET_AUDIO_FILE_HOLDER_FIELD_NUMBER = 3;
     private com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder assetAudioFileHolder_;
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_holder = 3;</code>
+     * <code>optional .sharedcode.FileHolder asset_audio_file_holder = 3;</code>
      */
     public boolean hasAssetAudioFileHolder() {
       return assetAudioFileHolder_ != null;
     }
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_holder = 3;</code>
+     * <code>optional .sharedcode.FileHolder asset_audio_file_holder = 3;</code>
      */
     public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder getAssetAudioFileHolder() {
       return assetAudioFileHolder_ == null ? com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder.getDefaultInstance() : assetAudioFileHolder_;
     }
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_holder = 3;</code>
+     * <code>optional .sharedcode.FileHolder asset_audio_file_holder = 3;</code>
      */
     private void setAssetAudioFileHolder(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder value) {
       if (value == null) {
@@ -4696,7 +4696,7 @@ public final class EditorModel {
       
       }
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_holder = 3;</code>
+     * <code>optional .sharedcode.FileHolder asset_audio_file_holder = 3;</code>
      */
     private void setAssetAudioFileHolder(
         com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder.Builder builderForValue) {
@@ -4704,7 +4704,7 @@ public final class EditorModel {
       
     }
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_holder = 3;</code>
+     * <code>optional .sharedcode.FileHolder asset_audio_file_holder = 3;</code>
      */
     private void mergeAssetAudioFileHolder(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder value) {
       if (assetAudioFileHolder_ != null &&
@@ -4717,7 +4717,7 @@ public final class EditorModel {
       
     }
     /**
-     * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_holder = 3;</code>
+     * <code>optional .sharedcode.FileHolder asset_audio_file_holder = 3;</code>
      */
     private void clearAssetAudioFileHolder() {  assetAudioFileHolder_ = null;
       
@@ -4726,19 +4726,19 @@ public final class EditorModel {
     public static final int CLIPPED_TIME_RANGE_FIELD_NUMBER = 4;
     private com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange clippedTimeRange_;
     /**
-     * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+     * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
      */
     public boolean hasClippedTimeRange() {
       return clippedTimeRange_ != null;
     }
     /**
-     * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+     * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
      */
     public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange getClippedTimeRange() {
       return clippedTimeRange_ == null ? com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange.getDefaultInstance() : clippedTimeRange_;
     }
     /**
-     * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+     * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
      */
     private void setClippedTimeRange(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange value) {
       if (value == null) {
@@ -4748,7 +4748,7 @@ public final class EditorModel {
       
       }
     /**
-     * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+     * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
      */
     private void setClippedTimeRange(
         com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange.Builder builderForValue) {
@@ -4756,7 +4756,7 @@ public final class EditorModel {
       
     }
     /**
-     * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+     * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
      */
     private void mergeClippedTimeRange(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange value) {
       if (clippedTimeRange_ != null &&
@@ -4769,7 +4769,7 @@ public final class EditorModel {
       
     }
     /**
-     * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+     * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
      */
     private void clearClippedTimeRange() {  clippedTimeRange_ = null;
       
@@ -4979,12 +4979,12 @@ public final class EditorModel {
      * 表示一个音频的素材
      * </pre>
      *
-     * Protobuf type {@code whensunset.editorsdk.model.AudioAsset}
+     * Protobuf type {@code sharedcode.AudioAsset}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
           com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset, Builder> implements
-        // @@protoc_insertion_point(builder_implements:whensunset.editorsdk.model.AudioAsset)
+        // @@protoc_insertion_point(builder_implements:sharedcode.AudioAsset)
         com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAssetOrBuilder {
       // Construct using com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset.newBuilder()
       private Builder() {
@@ -5056,19 +5056,19 @@ public final class EditorModel {
       }
 
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_holder = 3;</code>
+       * <code>optional .sharedcode.FileHolder asset_audio_file_holder = 3;</code>
        */
       public boolean hasAssetAudioFileHolder() {
         return instance.hasAssetAudioFileHolder();
       }
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_holder = 3;</code>
+       * <code>optional .sharedcode.FileHolder asset_audio_file_holder = 3;</code>
        */
       public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder getAssetAudioFileHolder() {
         return instance.getAssetAudioFileHolder();
       }
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_holder = 3;</code>
+       * <code>optional .sharedcode.FileHolder asset_audio_file_holder = 3;</code>
        */
       public Builder setAssetAudioFileHolder(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder value) {
         copyOnWrite();
@@ -5076,7 +5076,7 @@ public final class EditorModel {
         return this;
         }
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_holder = 3;</code>
+       * <code>optional .sharedcode.FileHolder asset_audio_file_holder = 3;</code>
        */
       public Builder setAssetAudioFileHolder(
           com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder.Builder builderForValue) {
@@ -5085,7 +5085,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_holder = 3;</code>
+       * <code>optional .sharedcode.FileHolder asset_audio_file_holder = 3;</code>
        */
       public Builder mergeAssetAudioFileHolder(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.FileHolder value) {
         copyOnWrite();
@@ -5093,7 +5093,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>optional .whensunset.editorsdk.model.FileHolder asset_audio_file_holder = 3;</code>
+       * <code>optional .sharedcode.FileHolder asset_audio_file_holder = 3;</code>
        */
       public Builder clearAssetAudioFileHolder() {  copyOnWrite();
         instance.clearAssetAudioFileHolder();
@@ -5101,19 +5101,19 @@ public final class EditorModel {
       }
 
       /**
-       * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+       * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
        */
       public boolean hasClippedTimeRange() {
         return instance.hasClippedTimeRange();
       }
       /**
-       * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+       * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
        */
       public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange getClippedTimeRange() {
         return instance.getClippedTimeRange();
       }
       /**
-       * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+       * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
        */
       public Builder setClippedTimeRange(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange value) {
         copyOnWrite();
@@ -5121,7 +5121,7 @@ public final class EditorModel {
         return this;
         }
       /**
-       * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+       * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
        */
       public Builder setClippedTimeRange(
           com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange.Builder builderForValue) {
@@ -5130,7 +5130,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+       * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
        */
       public Builder mergeClippedTimeRange(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange value) {
         copyOnWrite();
@@ -5138,7 +5138,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>optional .whensunset.editorsdk.model.TimeRange clipped_time_range = 4;</code>
+       * <code>optional .sharedcode.TimeRange clipped_time_range = 4;</code>
        */
       public Builder clearClippedTimeRange() {  copyOnWrite();
         instance.clearClippedTimeRange();
@@ -5214,7 +5214,7 @@ public final class EditorModel {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:whensunset.editorsdk.model.AudioAsset)
+      // @@protoc_insertion_point(builder_scope:sharedcode.AudioAsset)
     }
     protected final Object dynamicMethod(
         com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
@@ -5351,7 +5351,7 @@ public final class EditorModel {
     }
 
 
-    // @@protoc_insertion_point(class_scope:whensunset.editorsdk.model.AudioAsset)
+    // @@protoc_insertion_point(class_scope:sharedcode.AudioAsset)
     private static final com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new AudioAsset();
@@ -5370,7 +5370,7 @@ public final class EditorModel {
   }
 
   public interface VideoWorkspaceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:whensunset.editorsdk.model.VideoWorkspace)
+      // @@protoc_insertion_point(interface_extends:sharedcode.VideoWorkspace)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -5379,44 +5379,44 @@ public final class EditorModel {
     long getWorkSpaceId();
 
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     java.util.List<com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset> 
         getVideoAssetList();
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset getVideoAsset(int index);
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     int getVideoAssetCount();
 
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     java.util.List<com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset> 
         getAudioAssetList();
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset getAudioAsset(int index);
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     int getAudioAssetCount();
 
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     java.util.List<com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange> 
         getClippedRangesList();
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange getClippedRanges(int index);
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     int getClippedRangesCount();
 
@@ -5431,12 +5431,12 @@ public final class EditorModel {
     int getWorkspaceOutputHeight();
   }
   /**
-   * Protobuf type {@code whensunset.editorsdk.model.VideoWorkspace}
+   * Protobuf type {@code sharedcode.VideoWorkspace}
    */
   public  static final class VideoWorkspace extends
       com.google.protobuf.GeneratedMessageLite<
           VideoWorkspace, VideoWorkspace.Builder> implements
-      // @@protoc_insertion_point(message_implements:whensunset.editorsdk.model.VideoWorkspace)
+      // @@protoc_insertion_point(message_implements:sharedcode.VideoWorkspace)
       VideoWorkspaceOrBuilder {
     private VideoWorkspace() {
       videoAsset_ = emptyProtobufList();
@@ -5470,32 +5470,32 @@ public final class EditorModel {
     public static final int VIDEO_ASSET_FIELD_NUMBER = 2;
     private com.google.protobuf.Internal.ProtobufList<com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset> videoAsset_;
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     public java.util.List<com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset> getVideoAssetList() {
       return videoAsset_;
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     public java.util.List<? extends com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAssetOrBuilder> 
         getVideoAssetOrBuilderList() {
       return videoAsset_;
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     public int getVideoAssetCount() {
       return videoAsset_.size();
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset getVideoAsset(int index) {
       return videoAsset_.get(index);
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAssetOrBuilder getVideoAssetOrBuilder(
         int index) {
@@ -5509,7 +5509,7 @@ public final class EditorModel {
     }
 
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     private void setVideoAsset(
         int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset value) {
@@ -5520,7 +5520,7 @@ public final class EditorModel {
       videoAsset_.set(index, value);
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     private void setVideoAsset(
         int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset.Builder builderForValue) {
@@ -5528,7 +5528,7 @@ public final class EditorModel {
       videoAsset_.set(index, builderForValue.build());
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     private void addVideoAsset(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset value) {
       if (value == null) {
@@ -5538,7 +5538,7 @@ public final class EditorModel {
       videoAsset_.add(value);
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     private void addVideoAsset(
         int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset value) {
@@ -5549,7 +5549,7 @@ public final class EditorModel {
       videoAsset_.add(index, value);
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     private void addVideoAsset(
         com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset.Builder builderForValue) {
@@ -5557,7 +5557,7 @@ public final class EditorModel {
       videoAsset_.add(builderForValue.build());
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     private void addVideoAsset(
         int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset.Builder builderForValue) {
@@ -5565,7 +5565,7 @@ public final class EditorModel {
       videoAsset_.add(index, builderForValue.build());
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     private void addAllVideoAsset(
         java.lang.Iterable<? extends com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset> values) {
@@ -5574,13 +5574,13 @@ public final class EditorModel {
           values, videoAsset_);
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     private void clearVideoAsset() {
       videoAsset_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+     * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
      */
     private void removeVideoAsset(int index) {
       ensureVideoAssetIsMutable();
@@ -5590,32 +5590,32 @@ public final class EditorModel {
     public static final int AUDIO_ASSET_FIELD_NUMBER = 3;
     private com.google.protobuf.Internal.ProtobufList<com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset> audioAsset_;
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     public java.util.List<com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset> getAudioAssetList() {
       return audioAsset_;
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     public java.util.List<? extends com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAssetOrBuilder> 
         getAudioAssetOrBuilderList() {
       return audioAsset_;
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     public int getAudioAssetCount() {
       return audioAsset_.size();
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset getAudioAsset(int index) {
       return audioAsset_.get(index);
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAssetOrBuilder getAudioAssetOrBuilder(
         int index) {
@@ -5629,7 +5629,7 @@ public final class EditorModel {
     }
 
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     private void setAudioAsset(
         int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset value) {
@@ -5640,7 +5640,7 @@ public final class EditorModel {
       audioAsset_.set(index, value);
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     private void setAudioAsset(
         int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset.Builder builderForValue) {
@@ -5648,7 +5648,7 @@ public final class EditorModel {
       audioAsset_.set(index, builderForValue.build());
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     private void addAudioAsset(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset value) {
       if (value == null) {
@@ -5658,7 +5658,7 @@ public final class EditorModel {
       audioAsset_.add(value);
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     private void addAudioAsset(
         int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset value) {
@@ -5669,7 +5669,7 @@ public final class EditorModel {
       audioAsset_.add(index, value);
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     private void addAudioAsset(
         com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset.Builder builderForValue) {
@@ -5677,7 +5677,7 @@ public final class EditorModel {
       audioAsset_.add(builderForValue.build());
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     private void addAudioAsset(
         int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset.Builder builderForValue) {
@@ -5685,7 +5685,7 @@ public final class EditorModel {
       audioAsset_.add(index, builderForValue.build());
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     private void addAllAudioAsset(
         java.lang.Iterable<? extends com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset> values) {
@@ -5694,13 +5694,13 @@ public final class EditorModel {
           values, audioAsset_);
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     private void clearAudioAsset() {
       audioAsset_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+     * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
      */
     private void removeAudioAsset(int index) {
       ensureAudioAssetIsMutable();
@@ -5710,32 +5710,32 @@ public final class EditorModel {
     public static final int CLIPPED_RANGES_FIELD_NUMBER = 4;
     private com.google.protobuf.Internal.ProtobufList<com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange> clippedRanges_;
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     public java.util.List<com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange> getClippedRangesList() {
       return clippedRanges_;
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     public java.util.List<? extends com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRangeOrBuilder> 
         getClippedRangesOrBuilderList() {
       return clippedRanges_;
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     public int getClippedRangesCount() {
       return clippedRanges_.size();
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange getClippedRanges(int index) {
       return clippedRanges_.get(index);
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRangeOrBuilder getClippedRangesOrBuilder(
         int index) {
@@ -5749,7 +5749,7 @@ public final class EditorModel {
     }
 
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     private void setClippedRanges(
         int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange value) {
@@ -5760,7 +5760,7 @@ public final class EditorModel {
       clippedRanges_.set(index, value);
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     private void setClippedRanges(
         int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange.Builder builderForValue) {
@@ -5768,7 +5768,7 @@ public final class EditorModel {
       clippedRanges_.set(index, builderForValue.build());
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     private void addClippedRanges(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange value) {
       if (value == null) {
@@ -5778,7 +5778,7 @@ public final class EditorModel {
       clippedRanges_.add(value);
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     private void addClippedRanges(
         int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange value) {
@@ -5789,7 +5789,7 @@ public final class EditorModel {
       clippedRanges_.add(index, value);
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     private void addClippedRanges(
         com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange.Builder builderForValue) {
@@ -5797,7 +5797,7 @@ public final class EditorModel {
       clippedRanges_.add(builderForValue.build());
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     private void addClippedRanges(
         int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange.Builder builderForValue) {
@@ -5805,7 +5805,7 @@ public final class EditorModel {
       clippedRanges_.add(index, builderForValue.build());
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     private void addAllClippedRanges(
         java.lang.Iterable<? extends com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange> values) {
@@ -5814,13 +5814,13 @@ public final class EditorModel {
           values, clippedRanges_);
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     private void clearClippedRanges() {
       clippedRanges_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+     * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
      */
     private void removeClippedRanges(int index) {
       ensureClippedRangesIsMutable();
@@ -5997,12 +5997,12 @@ public final class EditorModel {
     }
 
     /**
-     * Protobuf type {@code whensunset.editorsdk.model.VideoWorkspace}
+     * Protobuf type {@code sharedcode.VideoWorkspace}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
           com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoWorkspace, Builder> implements
-        // @@protoc_insertion_point(builder_implements:whensunset.editorsdk.model.VideoWorkspace)
+        // @@protoc_insertion_point(builder_implements:sharedcode.VideoWorkspace)
         com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoWorkspaceOrBuilder {
       // Construct using com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoWorkspace.newBuilder()
       private Builder() {
@@ -6034,25 +6034,25 @@ public final class EditorModel {
       }
 
       /**
-       * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+       * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
        */
       public java.util.List<com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset> getVideoAssetList() {
         return java.util.Collections.unmodifiableList(
             instance.getVideoAssetList());
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+       * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
        */
       public int getVideoAssetCount() {
         return instance.getVideoAssetCount();
       }/**
-       * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+       * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
        */
       public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset getVideoAsset(int index) {
         return instance.getVideoAsset(index);
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+       * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
        */
       public Builder setVideoAsset(
           int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset value) {
@@ -6061,7 +6061,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+       * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
        */
       public Builder setVideoAsset(
           int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset.Builder builderForValue) {
@@ -6070,7 +6070,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+       * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
        */
       public Builder addVideoAsset(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset value) {
         copyOnWrite();
@@ -6078,7 +6078,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+       * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
        */
       public Builder addVideoAsset(
           int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset value) {
@@ -6087,7 +6087,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+       * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
        */
       public Builder addVideoAsset(
           com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset.Builder builderForValue) {
@@ -6096,7 +6096,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+       * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
        */
       public Builder addVideoAsset(
           int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset.Builder builderForValue) {
@@ -6105,7 +6105,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+       * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
        */
       public Builder addAllVideoAsset(
           java.lang.Iterable<? extends com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoAsset> values) {
@@ -6114,7 +6114,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+       * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
        */
       public Builder clearVideoAsset() {
         copyOnWrite();
@@ -6122,7 +6122,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.VideoAsset video_asset = 2;</code>
+       * <code>repeated .sharedcode.VideoAsset video_asset = 2;</code>
        */
       public Builder removeVideoAsset(int index) {
         copyOnWrite();
@@ -6131,25 +6131,25 @@ public final class EditorModel {
       }
 
       /**
-       * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+       * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
        */
       public java.util.List<com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset> getAudioAssetList() {
         return java.util.Collections.unmodifiableList(
             instance.getAudioAssetList());
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+       * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
        */
       public int getAudioAssetCount() {
         return instance.getAudioAssetCount();
       }/**
-       * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+       * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
        */
       public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset getAudioAsset(int index) {
         return instance.getAudioAsset(index);
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+       * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
        */
       public Builder setAudioAsset(
           int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset value) {
@@ -6158,7 +6158,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+       * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
        */
       public Builder setAudioAsset(
           int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset.Builder builderForValue) {
@@ -6167,7 +6167,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+       * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
        */
       public Builder addAudioAsset(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset value) {
         copyOnWrite();
@@ -6175,7 +6175,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+       * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
        */
       public Builder addAudioAsset(
           int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset value) {
@@ -6184,7 +6184,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+       * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
        */
       public Builder addAudioAsset(
           com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset.Builder builderForValue) {
@@ -6193,7 +6193,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+       * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
        */
       public Builder addAudioAsset(
           int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset.Builder builderForValue) {
@@ -6202,7 +6202,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+       * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
        */
       public Builder addAllAudioAsset(
           java.lang.Iterable<? extends com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.AudioAsset> values) {
@@ -6211,7 +6211,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+       * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
        */
       public Builder clearAudioAsset() {
         copyOnWrite();
@@ -6219,7 +6219,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.AudioAsset audio_asset = 3;</code>
+       * <code>repeated .sharedcode.AudioAsset audio_asset = 3;</code>
        */
       public Builder removeAudioAsset(int index) {
         copyOnWrite();
@@ -6228,25 +6228,25 @@ public final class EditorModel {
       }
 
       /**
-       * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+       * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
        */
       public java.util.List<com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange> getClippedRangesList() {
         return java.util.Collections.unmodifiableList(
             instance.getClippedRangesList());
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+       * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
        */
       public int getClippedRangesCount() {
         return instance.getClippedRangesCount();
       }/**
-       * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+       * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
        */
       public com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange getClippedRanges(int index) {
         return instance.getClippedRanges(index);
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+       * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
        */
       public Builder setClippedRanges(
           int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange value) {
@@ -6255,7 +6255,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+       * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
        */
       public Builder setClippedRanges(
           int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange.Builder builderForValue) {
@@ -6264,7 +6264,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+       * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
        */
       public Builder addClippedRanges(com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange value) {
         copyOnWrite();
@@ -6272,7 +6272,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+       * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
        */
       public Builder addClippedRanges(
           int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange value) {
@@ -6281,7 +6281,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+       * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
        */
       public Builder addClippedRanges(
           com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange.Builder builderForValue) {
@@ -6290,7 +6290,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+       * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
        */
       public Builder addClippedRanges(
           int index, com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange.Builder builderForValue) {
@@ -6299,7 +6299,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+       * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
        */
       public Builder addAllClippedRanges(
           java.lang.Iterable<? extends com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.TimeRange> values) {
@@ -6308,7 +6308,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+       * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
        */
       public Builder clearClippedRanges() {
         copyOnWrite();
@@ -6316,7 +6316,7 @@ public final class EditorModel {
         return this;
       }
       /**
-       * <code>repeated .whensunset.editorsdk.model.TimeRange clipped_ranges = 4;</code>
+       * <code>repeated .sharedcode.TimeRange clipped_ranges = 4;</code>
        */
       public Builder removeClippedRanges(int index) {
         copyOnWrite();
@@ -6370,7 +6370,7 @@ public final class EditorModel {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:whensunset.editorsdk.model.VideoWorkspace)
+      // @@protoc_insertion_point(builder_scope:sharedcode.VideoWorkspace)
     }
     protected final Object dynamicMethod(
         com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
@@ -6498,7 +6498,7 @@ public final class EditorModel {
     }
 
 
-    // @@protoc_insertion_point(class_scope:whensunset.editorsdk.model.VideoWorkspace)
+    // @@protoc_insertion_point(class_scope:sharedcode.VideoWorkspace)
     private static final com.whensunset.mttvideoeditorsdk.model.protobuf.EditorModel.VideoWorkspace DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new VideoWorkspace();

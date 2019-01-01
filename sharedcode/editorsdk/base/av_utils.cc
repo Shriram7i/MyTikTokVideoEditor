@@ -1,0 +1,4 @@
+namespace whensunset {
+    namespace base {
+    }
+}

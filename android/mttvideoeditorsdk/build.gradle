@@ -12,10 +12,12 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                cppFlags "-std=c++14 -frtti -fexceptions"
+                arguments "-DANDROID_ARM_NEON=TRUE", "-DANDROID_TOOLCHAIN=clang", "-DANDROID_STL=c++_shared"
+                cFlags "-D_EXAMPLE_C_FLAG1", "-D_EXAMPLE_C_FLAG2"
+                cppFlags "-std=c++11", "-D__STDC_FORMAT_MACROS", "-DST_NO_EXCEPTION_HANDLING", "-frtti"
             }
             ndk {
-                abiFilters "armeabi"
+                abiFilters 'armeabi'
             }
         }
     }
@@ -35,7 +37,7 @@ android {
 
     sourceSets {
         main {
-            jniLibs.srcDirs = ['../android_ffmpeg']
+            jniLibs.srcDirs = ['../android_ffmpeg','../android_protobuf','lib']
         }
     }
 }

@@ -1,11 +1,12 @@
 #include <jni.h>
 #include "ffmpeg_sample.h"
+#include "../../../../../../sharedcode/editorsdk/generated_protobuf/editor_model.pb.h"
+#include <google/protobuf/arena.h>
 extern "C"
 {
 #include "libavfilter/avfilter.h"
 #include "libavformat/avformat.h"
 }
-
 #define LOGI(FORMAT,...) __android_log_print(ANDROID_LOG_INFO,"whensunset",FORMAT,##__VA_ARGS__);
 
 #ifdef ANDROID
@@ -59,4 +60,5 @@ JNIEXPORT void JNICALL
 Java_com_whensunset_mytiktokvideoeditor_GameActivity_initFfmpegLog(JNIEnv *env, jobject instance) {
 
     av_log_set_callback(log_callback_null);
+    google::protobuf::Arena arena;
 }

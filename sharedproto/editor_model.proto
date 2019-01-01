@@ -1,5 +1,5 @@
 syntax = "proto3";
-package whensunset.editorsdk.model;
+package sharedcode;
 option optimize_for = LITE_RUNTIME;
 option java_package = "com.whensunset.mttvideoeditorsdk.model.protobuf";
 
