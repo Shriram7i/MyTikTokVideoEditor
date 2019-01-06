@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # exit 不注释的时候，表示 android 项目编译的时候不需要编译 ffmepg，注释的时候，表示 android 项目编译的时候要编译 ffmpeg。
- exit
+# exit
 
 # 执行 FFmpeg 源码项目中的编译脚本
 sh /Users/whensunset/AndroidStudioProjects/KSVideoProject/ffmpeg/build_android.sh
@@ -18,5 +18,4 @@ rm ${so_path}${libffmpeg_name}
 build_so_path="/Users/whensunset/AndroidStudioProjects/KSVideoProject/ffmpeg/android/arm/"
 
 # 将新编译的 so 文件拷贝到当前项目的 so 目录下
-cd /Users/whensunset/AndroidStudioProjects/KSVideoProject/FFmpeglearning/app
 cp ${build_so_path}${libffmpeg_name} ${so_path}${libffmpeg_name}

@@ -37,7 +37,7 @@ android {
 
     sourceSets {
         main {
-            jniLibs.srcDirs = ['../android_ffmpeg','../android_protobuf','lib']
+            jniLibs.srcDirs = ['../android_ffmpeg','lib']
         }
     }
 }

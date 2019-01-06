@@ -3,6 +3,7 @@ package sharedcode;
 option optimize_for = LITE_RUNTIME;
 option java_package = "com.whensunset.mttvideoeditorsdk.model.protobuf";
 
+// 用于保存一段时间，单位是秒
 message TimeRange {
     double start = 1;
     double duration = 2;
@@ -42,7 +43,7 @@ message FileHolder {
     int32 video_strema_index = 6;
     // 文件中多媒体信息流中最优的音频流
     int32 audio_strema_index = 7;
-    string video_comment = 9;
+    string video_comment = 8;
 }
 
 message Color {
@@ -55,9 +56,7 @@ message Color {
 // 素材的种类
 enum AssetType {
     ASSET_TYPE_VIDEO = 0;
-    // 以后会有贴纸、滤镜等等其他素材
-    ASSET_TYPE_SUB = 1;
-    ASSET_TYPE_AUDIO = 2;
+    ASSET_TYPE_AUDIO = 1;
 }
 // 表示一个视频素材
 message VideoAsset {
@@ -66,14 +65,12 @@ message VideoAsset {
     string asset_path = 2;
     FileHolder asset_video_file_hodler = 3;
     // 当前素材被剪裁的时间区域
-    TimeRange clipped_time_range = 4;
+    repeated TimeRange clipped_time_range = 4;
     // 视频的速度
     double speed = 5;
     // 视频声音大小
     double volume = 6;
-    string asset_audio_path = 7;
-    FileHolder asset_audio_file_hodler = 8;
-    bool is_reversed = 9;
+    bool is_reversed = 7;
 }
 
 // 表示一个音频的素材
@@ -81,12 +78,13 @@ message AudioAsset {
     uint64 asset_id = 1;
     string asset_path = 2;
     FileHolder asset_audio_file_holder = 3;
-    TimeRange clipped_time_range = 4;
+    repeated TimeRange clipped_time_range = 4;
     double speed = 5;
     double volume = 6;
     bool is_repeat = 7;
 }
 
+// 表示一次视频编辑的流程
 message VideoWorkspace {
     int64 work_space_id = 1;
     repeated VideoAsset video_asset = 2;
@@ -94,13 +92,13 @@ message VideoWorkspace {
     repeated TimeRange clipped_ranges = 4;
     int32 workspace_output_width = 5;
     int32 workspace_output_height = 6;
-
+    VideoEncoderType video_encoder_type = 7;
 }
 
+// 当前视频编辑流程使用的编解码方式
 enum VideoEncoderType {
-    VIDEO_ENCODER_TYPE_DEFAULT = 0;
-    VIDEO_ENCODER_TYPE_FFMPEG_MJPEG = 3;
-    VIDEO_ENCODER_TYPE_MEDIACODEC = 5;
+    VIDEO_ENCODER_TYPE_FFMPEG_MJPEG = 0;
+    VIDEO_ENCODER_TYPE_MEDIACODEC = 1;
 }
 
 
